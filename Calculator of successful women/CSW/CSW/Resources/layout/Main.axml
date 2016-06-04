@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/holo_orange_dark">
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:background="@android:color/holo_orange_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:id="@+id/tableRow1">
+            <TextView
+                android:text="@string/Name"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView1"
+                android:layout_column="0"
+                android:textColor="@android:color/holo_green_dark" />
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_column="1"
+                android:layout_width="139.5dp"
+                android:background="@android:color/holo_orange_light"
+                android:layout_height="40.0dp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow2">
+            <TextView
+                android:text="@string/Age"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView2"
+                android:layout_column="0"
+                android:textColor="@android:color/holo_green_dark" />
+            <EditText
+                android:id="@+id/editTextAge"
+                android:layout_column="1"
+                android:layout_width="wrap_content"
+                android:background="@android:color/holo_orange_light"
+                android:layout_height="40.0dp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow3">
+            <TextView
+                android:text="@string/Pet"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="0"
+                android:id="@+id/textView13"
+                android:textColor="@android:color/holo_green_dark" />
+            <CheckBox
+                android:text="@string/Cat"
+                android:id="@+id/checkBoxCat"
+                android:layout_column="1"
+                android:layout_height="45.0dp"
+                android:layout_width="wrap_content"
+                android:textSize="20dp" />
+            <CheckBox
+                android:text="@string/Dog"
+                android:id="@+id/checkBoxDog"
+                android:layout_column="2"
+                android:layout_height="45.0dp"
+                android:layout_width="wrap_content"
+                android:textSize="20dp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow4">
+            <TextView
+                android:text="@string/Partner"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="0"
+                android:id="@+id/textView13"
+                android:textColor="@android:color/holo_green_dark" />
+            <CheckBox
+                android:text="@string/Girl"
+                android:id="@+id/checkBoxGirl"
+                android:layout_column="1"
+                android:layout_height="45.0dp"
+                android:layout_width="wrap_content"
+                android:textSize="20dp" />
+            <CheckBox
+                android:text="@string/Boy"
+                android:id="@+id/checkBoxBoy"
+                android:layout_column="2"
+                android:layout_height="45.0dp"
+                android:layout_width="wrap_content"
+                android:textSize="20dp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow5">
+            <TextView
+                android:text="@string/Kids"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="0"
+                android:id="@+id/textView13"
+                android:textColor="@android:color/holo_green_dark" />
+            <EditText
+                android:id="@+id/editTextKids"
+                android:layout_column="1"
+                android:layout_width="wrap_content"
+                android:background="@android:color/holo_orange_light"
+                android:layout_height="40.0dp" />
+        </TableRow>
+    </TableLayout>
+    <TextView
+        android:text="@string/Prioryty"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView3"
+        android:layout_column="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_gravity="center" />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup1">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/Career"
+            android:id="@+id/radioButtonCareer"
+            android:textSize="20dp" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Family"
+            android:id="@+id/radioButtonFamily"
+            android:textSize="20dp" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Yourself"
+            android:id="@+id/radioButtonYourself"
+            android:textSize="20dp" />
+    </RadioGroup>
+    <Button
+        android:text="Calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/calculateButton"
+        android:layoutDirection="inherit"
+        android:layout_gravity="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:background="@android:color/holo_green_light" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewRsult"
+        android:layout_gravity="center" />
+</LinearLayout>
