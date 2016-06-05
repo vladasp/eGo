@@ -161,18 +161,6 @@ namespace CSW
 			// aapt resource value: 0x7f040004
 			public const int Age = 2130968580;
 			
-			// aapt resource value: 0x7f040010
-			public const int Ansver1 = 2130968592;
-			
-			// aapt resource value: 0x7f040011
-			public const int Ansver2 = 2130968593;
-			
-			// aapt resource value: 0x7f040012
-			public const int Ansver3 = 2130968594;
-			
-			// aapt resource value: 0x7f040013
-			public const int Ansver4 = 2130968595;
-			
 			// aapt resource value: 0x7f040001
 			public const int ApplicationName = 2130968577;
 			

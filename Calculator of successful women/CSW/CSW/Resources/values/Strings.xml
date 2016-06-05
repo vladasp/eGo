@@ -16,9 +16,4 @@
     <string name="Family">Family</string>
     <string name="Yourself">Yourself</string>
     <string name="Kids"> Amount of kids</string>
-  
-    <string name="Ansver1">You are too small for this calculator</string>
-    <string name="Ansver2">Congratulations! You are the one who reaches goals</string>
-    <string name="Ansver3">You are (or will be) great mother and wife!</string>
-    <string name="Ansver4">This calculator only for earthlings</string>
 </resources>

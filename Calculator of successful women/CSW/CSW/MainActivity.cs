@@ -101,22 +101,22 @@ namespace CSW
             switch (index)
             {
                 case 1:
-                    ansver.Text = Result.Ansver1;
+                    ansver.Text = nameText.Text + "\n" + Result.Ansver1;
                     break;
                 case 2:
-                    ansver.Text = Result.Ansver2;
+                    ansver.Text = nameText.Text + "\n" + Result.Ansver2;
                     break;
                 case 31:
-                    ansver.Text = Result.Ansver31;
+                    ansver.Text = nameText.Text + "\n" + Result.Ansver31;
                     break;
                 case 32:
-                    ansver.Text = Result.Ansver32;
+                    ansver.Text = nameText.Text + "\n" + Result.Ansver32;
                     break;
                 case 4:
-                    ansver.Text = Result.Ansver4;
+                    ansver.Text = nameText.Text + "\n" + Result.Ansver4;
                     break;
                 default:
-                    ansver.Text = Result.Ansver5;
+                    ansver.Text = nameText.Text + "\n" + Result.Ansver5;
                     break;
             }
         }
