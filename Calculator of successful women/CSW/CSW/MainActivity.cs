@@ -8,7 +8,7 @@ using Android.OS;
 
 namespace CSW
 {
-    [Activity(Label = "CSW", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Calculator of successful women", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         Button calcButton;
@@ -58,56 +58,39 @@ namespace CSW
 
         private void CalcButton_Click(object sender, EventArgs e)
         {
-            int input = 5;
-            if (nameText.Text == string.Empty)
+            int input = 0;
+            if (!NormaAge() || !CanCalcKids())
+            {
+                input = 5;
+            }
+            else if (IsAnotherPlanet())
             {
                 input = 4;
             }
-            else if (int.TryParse(ageText.Text, out age))
+            else if (!IsAdult())
             {
-                if (age > 100)
+                input = 1;
+            }
+            else if(kids == 0)
+            {
+                if(CatLady() || !ClassicalOrientation() || !familyRadioButton.Checked)
                 {
-                    input = 4;
-                }
-                else if (age < 18)
-                {
-                    input = 1;
-                }
-                else if (careerRadioButton.Checked || yourselfRadioButton.Checked)
-                {
-                    if (int.TryParse(kidsText.Text, out kids))
-                    {
-                        if (kids > 0 && kids < 15)
-                        {
-                            input = 3;
-                        }
-                        else
-                        {
-                            input = 4;
-                        }
-                    }
-                    else
-                    {
-                        input = 2;
-                    }
+                    input = 2;
                 }
                 else if (familyRadioButton.Checked)
                 {
-                    if (int.TryParse(kidsText.Text, out kids))
-                    {
-                        if (kids > 0 && kids < 15)
-                        {
-                            input = 3;
-                        }
-                        else
-                        {
-                            input = 4;
-                        }
-                    }
-                    else
-                    {
-                        input = 3;
-                    }
+                    input = 32;
+                }
+            }
+            else if (kids > 0)
+            {
+                if (yourselfRadioButton.Checked)
+                {
+                    input = 2;
+                }
+                else
+                {
+                    input = 31;
                 }
             }
             GetResult(input);
@@ -123,8 +106,11 @@ namespace CSW
                 case 2:
                     ansver.Text = Result.Ansver2;
                     break;
-                case 3:
-                    ansver.Text = Result.Ansver3;
+                case 31:
+                    ansver.Text = Result.Ansver31;
+                    break;
+                case 32:
+                    ansver.Text = Result.Ansver32;
                     break;
                 case 4:
                     ansver.Text = Result.Ansver4;
@@ -135,6 +121,78 @@ namespace CSW
             }
         }
 
+        private bool CanCalcKids()
+        {
+            if (kidsText.Text == string.Empty)
+            {
+                kids = 0;
+                return true;
+            }
+            else if (int.TryParse(kidsText.Text, out kids))
+            {
+                if (kids > 0) return true;
+                else return false;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private bool ClassicalOrientation()
+        {
+            if(boyCheckBox.Checked && girlCheckBox.Checked || girlCheckBox.Checked)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private bool CatLady()
+        {
+            if(catCheckBox.Checked && dogCheckBox.Checked)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private bool NormaAge()
+        {
+            if (int.TryParse(ageText.Text, out age))
+            {
+                if (age > 0 && age < 100) return true;
+                else return false;
+            }
+            else return false;
+        }
+
+        private bool IsAdult()
+        {
+            if(NormaAge() && age >= 18)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private bool IsAnotherPlanet()
+        {
+            if(nameText.Text == string.Empty || dogCheckBox.Checked && catCheckBox.Checked && girlCheckBox.Checked && boyCheckBox.Checked)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
 

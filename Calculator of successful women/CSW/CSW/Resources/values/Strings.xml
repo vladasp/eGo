@@ -2,10 +2,10 @@
 <resources>
     <string name="Hello">Hello World, Click Me!</string>
     <string name="ApplicationName">Calculator of strong women</string>
-    <string name="IsMarried">Have boyfriend/husband</string>
-    <string name="Name">Name</string>
-    <string name="Age">Age</string>
-    <string name="Pet">Pet</string>
+    <string name="IsMarried"> Have boyfriend/husband</string>
+    <string name="Name"> Name</string>
+    <string name="Age"> Age</string>
+    <string name="Pet"> Pet</string>
     <string name="Dog">Dog</string>
     <string name="Cat">Cat</string>
     <string name="Partner">Life partner</string>
@@ -15,7 +15,7 @@
     <string name="Career">Career</string>
     <string name="Family">Family</string>
     <string name="Yourself">Yourself</string>
-    <string name="Kids">Amount of kids</string>
+    <string name="Kids"> Amount of kids</string>
   
     <string name="Ansver1">You are too small for this calculator</string>
     <string name="Ansver2">Congratulations! You are the one who reaches goals</string>
