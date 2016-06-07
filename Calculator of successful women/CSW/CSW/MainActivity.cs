@@ -9,11 +9,10 @@ using Android.Graphics;
 
 namespace CSW
 {
-    [Activity(Label = "Calculator of successful women", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "CSW", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         #region Initial fields
-        Button calcButton;
         CheckBox catCheckBox;
         CheckBox dogCheckBox;
         CheckBox boyCheckBox;
@@ -37,15 +36,30 @@ namespace CSW
             SetContentView(Resource.Layout.Main);
 
             InitControls();
+        }
 
-            calcButton.Click += CalcButton_Click;
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.main, menu);
 
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Resource.Id.menuItem:
+                    CalcButton_Click();
+                    return true;
+                default:
+                    return base.OnOptionsItemSelected(item);
+            }
         }
 
         private void InitControls()
         {
             // Get our controls from the layout resource,
-            calcButton = FindViewById<Button>(Resource.Id.calculateButton);
             catCheckBox = FindViewById<CheckBox>(Resource.Id.checkBoxCat);
             dogCheckBox = FindViewById<CheckBox>(Resource.Id.checkBoxDog);
             boyCheckBox = FindViewById<CheckBox>(Resource.Id.checkBoxBoy);
@@ -59,7 +73,7 @@ namespace CSW
             ansver = FindViewById<TextView>(Resource.Id.textViewRsult);
         }
 
-        private void CalcButton_Click(object sender, EventArgs e)
+        private void CalcButton_Click()
         {
             kidsText.SetBackgroundColor(Color.LightGray);
             ageText.SetBackgroundColor(Color.LightGray);
@@ -78,6 +92,7 @@ namespace CSW
             {
                 ageText.SetBackgroundColor(NormaAge() ? Color.LightGray : Color.LightPink);
                 kidsText.SetBackgroundColor(CanCalcKids() ? Color.LightGray : Color.LightPink);
+                nameText.SetBackgroundColor((nameText.Text == string.Empty) ? Color.LightPink : Color.LightGray);
                 input = 5;
             }
             else if (IsAnotherPlanet())
@@ -148,14 +163,7 @@ namespace CSW
             }
             else if (int.TryParse(kidsText.Text, out kids))
             {
-                if (kids > 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return kids >= 0;
             }
             else
             {

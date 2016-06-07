@@ -24,5 +24,6 @@
     <string name="Ansver4">This calculator only for earthling</string>
     <string name="Ansver5">ERROR! You break an internet.FBI is already rushing to you!</string>
 
-
+    <string name="menuItem">MenuItem</string>
+  
 </resources>
