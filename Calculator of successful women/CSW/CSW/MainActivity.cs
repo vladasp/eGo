@@ -5,12 +5,14 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Graphics;
 
 namespace CSW
 {
     [Activity(Label = "Calculator of successful women", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
+        #region Initial fields
         Button calcButton;
         CheckBox catCheckBox;
         CheckBox dogCheckBox;
@@ -25,6 +27,7 @@ namespace CSW
         RadioButton familyRadioButton;
         RadioButton yourselfRadioButton;
         TextView ansver;
+        #endregion
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -58,22 +61,37 @@ namespace CSW
 
         private void CalcButton_Click(object sender, EventArgs e)
         {
+            kidsText.SetBackgroundColor(Color.LightGray);
+            ageText.SetBackgroundColor(Color.LightGray);
+            nameText.SetBackgroundColor(Color.LightGray);
+
+            int input = GetInputValue();
+
+            GetResult(input);
+        }
+
+        private int GetInputValue()
+        {
             int input = 0;
+
             if (!NormaAge() || !CanCalcKids())
             {
+                ageText.SetBackgroundColor(NormaAge() ? Color.LightGray : Color.LightPink);
+                kidsText.SetBackgroundColor(CanCalcKids() ? Color.LightGray : Color.LightPink);
                 input = 5;
             }
             else if (IsAnotherPlanet())
             {
+                nameText.SetBackgroundColor((nameText.Text == string.Empty) ? Color.LightPink : Color.LightGray);
                 input = 4;
             }
             else if (!IsAdult())
             {
                 input = 1;
             }
-            else if(kids == 0)
+            else if (kids == 0)
             {
-                if(CatLady() || !ClassicalOrientation() || !familyRadioButton.Checked)
+                if (CatLady() || !ClassicalOrientation() || !familyRadioButton.Checked)
                 {
                     input = 2;
                 }
@@ -93,7 +111,7 @@ namespace CSW
                     input = 31;
                 }
             }
-            GetResult(input);
+            return input;
         }
 
         private void GetResult(int index)
@@ -101,22 +119,22 @@ namespace CSW
             switch (index)
             {
                 case 1:
-                    ansver.Text = nameText.Text + "\n" + Result.Ansver1;
+                    ansver.Text = nameText.Text + "\n" + GetString(Resource.String.Ansver1);
                     break;
                 case 2:
-                    ansver.Text = nameText.Text + "\n" + Result.Ansver2;
+                    ansver.Text = nameText.Text + "\n" + GetString(Resource.String.Ansver2);
                     break;
                 case 31:
-                    ansver.Text = nameText.Text + "\n" + Result.Ansver31;
+                    ansver.Text = nameText.Text + "\n" + GetString(Resource.String.Ansver31);
                     break;
                 case 32:
-                    ansver.Text = nameText.Text + "\n" + Result.Ansver32;
+                    ansver.Text = nameText.Text + "\n" + GetString(Resource.String.Ansver32);
                     break;
                 case 4:
-                    ansver.Text = nameText.Text + "\n" + Result.Ansver4;
+                    ansver.Text = nameText.Text + "\n" + GetString(Resource.String.Ansver4);
                     break;
                 default:
-                    ansver.Text = nameText.Text + "\n" + Result.Ansver5;
+                    ansver.Text = nameText.Text + "\n" + GetString(Resource.String.Ansver5);
                     break;
             }
         }
@@ -130,32 +148,14 @@ namespace CSW
             }
             else if (int.TryParse(kidsText.Text, out kids))
             {
-                if (kids > 0) return true;
-                else return false;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        private bool ClassicalOrientation()
-        {
-            if(boyCheckBox.Checked && girlCheckBox.Checked || girlCheckBox.Checked)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
-        private bool CatLady()
-        {
-            if(catCheckBox.Checked && dogCheckBox.Checked)
-            {
-                return true;
+                if (kids > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {
@@ -165,33 +165,27 @@ namespace CSW
 
         private bool NormaAge()
         {
-            if (int.TryParse(ageText.Text, out age))
-            {
-                if (age > 0 && age < 100) return true;
-                else return false;
-            }
-            else return false;
+            return int.TryParse(ageText.Text, out age) && age > 0 && age < 100;
+        }
+
+        private bool ClassicalOrientation()
+        {
+            return boyCheckBox.Checked && girlCheckBox.Checked || girlCheckBox.Checked;
+        }
+
+        private bool CatLady()
+        {
+            return catCheckBox.Checked && dogCheckBox.Checked;
         }
 
         private bool IsAdult()
         {
-            if(NormaAge() && age >= 18)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return NormaAge() && age >= 18;
         }
 
         private bool IsAnotherPlanet()
         {
-            if(nameText.Text == string.Empty || dogCheckBox.Checked && catCheckBox.Checked && girlCheckBox.Checked && boyCheckBox.Checked)
-            {
-                return true;
-            }
-            return false;
+            return nameText.Text == string.Empty || dogCheckBox.Checked && catCheckBox.Checked && girlCheckBox.Checked && boyCheckBox.Checked;
         }
     }
 }
