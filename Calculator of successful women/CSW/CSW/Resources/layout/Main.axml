@@ -13,6 +13,12 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:stretchColumns="1">
+            <ImageView
+                android:src="@drawable/ic_android_white_24dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="fitStart"
+                android:layout_weight="1" />
             <LinearLayout
                 android:orientation="horizontal"
                 android:id="@+id/linearLayout1">
