@@ -51,7 +51,10 @@ namespace CSW
 			public const int ic_directions_boat_black_24dp = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int Icon = 2130837506;
+			public const int ic_directions_boat_white_24dp = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int Icon = 2130837507;
 			
 			static Drawable()
 			{
