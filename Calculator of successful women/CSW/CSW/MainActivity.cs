@@ -36,6 +36,10 @@ namespace CSW
             SetContentView(Resource.Layout.Main);
 
             InitControls();
+
+            kidsText.SetBackgroundColor(Color.LightGray);
+            ageText.SetBackgroundColor(Color.LightGray);
+            nameText.SetBackgroundColor(Color.LightGray);
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

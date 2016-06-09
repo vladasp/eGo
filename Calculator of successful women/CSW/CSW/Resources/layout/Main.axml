@@ -1,160 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-  <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-      android:layout_width="fill_parent"
-      android:layout_height="fill_parent"
-      android:background="#36648B">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/dirty_blue">
     <TableLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:stretchColumns="1">
-      <ImageView
-          android:src="@drawable/ic_android_white_24dp"
-          android:layout_width="match_parent"
-          android:layout_height="0dp"
-          android:scaleType="fitStart"
-          android:layout_weight="1" />
-      <LinearLayout
-          android:orientation="horizontal"
-          android:id="@+id/linearLayout1">
-        <TextView
-            android:text="@string/Name"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/textView1"
-            android:textColor="#7FFF00"
-            android:layout_width="160dp"
-            android:layout_height="match_parent" />
-        <EditText
-            android:id="@+id/editTextName"
-            android:background="#CDC9C9"
-            android:textColor="@android:color/background_dark"
+        <ImageView
+            android:src="@drawable/ic_android_white_24dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp" />
-      </LinearLayout>
-      <LinearLayout
-          android:orientation="horizontal"
-          android:id="@+id/linearLayout2">
-        <TextView
-            android:text="@string/Age"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/textView2"
-            android:textColor="#7FFF00"
-            android:layout_width="160dp"
-            android:layout_height="match_parent" />
-        <EditText
-            android:id="@+id/editTextAge"
-            android:background="#CDC9C9"
-            android:textColor="@android:color/background_dark"
+            android:layout_height="0dp"
+            android:scaleType="fitStart"
+            android:layout_weight="1" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout1">
+            <TextView
+                style="@style/LibelSize"
+                android:text="@string/Name"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView1"
+                android:textColor="@color/dirty_green"
+                android:layout_height="match_parent" />
+            <EditText
+                style="@style/EnterFild"
+                android:id="@+id/editTextName"
+                android:textColor="@android:color/background_dark"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout2">
+            <TextView
+                style="@style/LibelSize"
+                android:text="@string/Age"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView2"
+                android:textColor="@color/dirty_green"
+                android:layout_height="match_parent" />
+            <EditText
+                style="@style/EnterFild"
+                android:id="@+id/editTextAge"
+                android:textColor="@android:color/background_dark"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout3">
+            <TextView
+                style="@style/LibelSize"
+                android:text="@string/Pet"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView13"
+                android:textColor="@color/dirty_green"
+                android:layout_height="match_parent" />
+            <CheckBox
+                style="@style/LeftTextSize"
+                android:text="@string/Cat"
+                android:id="@+id/checkBoxCat"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <CheckBox
+                style="@style/TextSize"
+                android:text="@string/Dog"
+                android:id="@+id/checkBoxDog"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout4">
+            <TextView
+                style="@style/LibelSize"
+                android:text="@string/Partner"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView13"
+                android:textColor="@color/dirty_green"
+                android:layout_height="match_parent" />
+            <CheckBox
+                style="@style/LeftTextSize"
+                android:text="@string/Girl"
+                android:id="@+id/checkBoxGirl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            <CheckBox
+                style="@style/TextSize"
+                android:text="@string/Boy"
+                android:id="@+id/checkBoxBoy"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout5">
+            <TextView
+                android:text="@string/Kids"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView13"
+                android:textColor="@color/dirty_green"
+                android:layout_width="160dp"
+                android:layout_height="match_parent" />
+            <EditText
+                style="@style/EnterFild"
+                android:id="@+id/editTextKids"
+                android:textColor="@android:color/background_dark"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp" />
-      </LinearLayout>
-      <LinearLayout
-          android:orientation="horizontal"
-          android:id="@+id/linearLayout3">
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup1">
+            <TextView
+                style="@style/EnterFild"
+                android:text="@string/Prioryty"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textView3"
+                android:layout_column="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dirty_green"
+                android:layout_gravity="center" />
+            <RadioButton
+                style="@style/TextSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/Career"
+                android:id="@+id/radioButtonCareer" />
+            <RadioButton
+                style="@style/TextSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Family"
+                android:id="@+id/radioButtonFamily" />
+            <RadioButton
+                style="@style/TextSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Yourself"
+                android:id="@+id/radioButtonYourself" />
+        </RadioGroup>
         <TextView
-            android:text="@string/Pet"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/textView13"
-            android:textColor="#7FFF00"
-            android:layout_width="160dp"
-            android:layout_height="match_parent" />
-        <CheckBox
-            android:text="@string/Cat"
-            android:id="@+id/checkBoxCat"
-            android:textSize="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginRight="15dp" />
-        <CheckBox
-            android:text="@string/Dog"
-            android:id="@+id/checkBoxDog"
-            android:textSize="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
-      </LinearLayout>
-      <LinearLayout
-          android:orientation="horizontal"
-          android:id="@+id/linearLayout4">
-        <TextView
-            android:text="@string/Partner"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/textView13"
-            android:textColor="#7FFF00"
-            android:layout_width="160dp"
-            android:layout_height="match_parent" />
-        <CheckBox
-            android:text="@string/Girl"
-            android:id="@+id/checkBoxGirl"
-            android:textSize="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginRight="15dp" />
-        <CheckBox
-            android:text="@string/Boy"
-            android:id="@+id/checkBoxBoy"
-            android:textSize="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
-      </LinearLayout>
-      <LinearLayout
-          android:orientation="horizontal"
-          android:id="@+id/linearLayout5">
-        <TextView
-            android:text="@string/Kids"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/textView13"
-            android:textColor="#7FFF00"
-            android:layout_width="160dp"
-            android:layout_height="match_parent" />
-        <EditText
-            android:id="@+id/editTextKids"
-            android:background="#CDC9C9"
-            android:textColor="@android:color/background_dark"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp" />
-      </LinearLayout>
-      <RadioGroup
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:id="@+id/radioGroup1">
-        <TextView
-            android:text="@string/Prioryty"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/textView3"
-            android:layout_column="0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#7FFF00"
-            android:layout_gravity="center"
-            android:layout_margin="5dp" />
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="@string/Career"
-            android:id="@+id/radioButtonCareer"
-            android:textSize="20dp" />
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Family"
-            android:id="@+id/radioButtonFamily"
-            android:textSize="20dp" />
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Yourself"
-            android:id="@+id/radioButtonYourself"
-            android:textSize="20dp" />
-      </RadioGroup>
-      <TextView
-          android:textAppearance="?android:attr/textAppearanceLarge"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:id="@+id/textViewRsult"
-          android:textColor="#FF8247"
-          android:layout_gravity="center" />
+            android:id="@+id/textViewRsult"
+            android:textColor="@color/dirty_red"
+            android:layout_gravity="center" />
     </TableLayout>
-  </ScrollView>
+</ScrollView>

@@ -28,6 +28,22 @@ namespace CSW
 		{
 		}
 		
+		public partial class Array
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int androidcolors = 2131034112;
+			
+			static Array()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Array()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -37,6 +53,31 @@ namespace CSW
 			}
 			
 			private Attribute()
+			{
+			}
+		}
+		
+		public partial class Color
+		{
+			
+			// aapt resource value: 0x7f040002
+			public const int dirty_blue = 2130968578;
+			
+			// aapt resource value: 0x7f040001
+			public const int dirty_green = 2130968577;
+			
+			// aapt resource value: 0x7f040003
+			public const int dirty_red = 2130968579;
+			
+			// aapt resource value: 0x7f040000
+			public const int transparent = 2130968576;
+			
+			static Color()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Color()
 			{
 			}
 		}
@@ -69,71 +110,71 @@ namespace CSW
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f06000c
-			public const int checkBoxBoy = 2131099660;
+			// aapt resource value: 0x7f09000c
+			public const int checkBoxBoy = 2131296268;
 			
-			// aapt resource value: 0x7f060008
-			public const int checkBoxCat = 2131099656;
+			// aapt resource value: 0x7f090008
+			public const int checkBoxCat = 2131296264;
 			
-			// aapt resource value: 0x7f060009
-			public const int checkBoxDog = 2131099657;
+			// aapt resource value: 0x7f090009
+			public const int checkBoxDog = 2131296265;
 			
-			// aapt resource value: 0x7f06000b
-			public const int checkBoxGirl = 2131099659;
+			// aapt resource value: 0x7f09000b
+			public const int checkBoxGirl = 2131296267;
 			
-			// aapt resource value: 0x7f060005
-			public const int editTextAge = 2131099653;
+			// aapt resource value: 0x7f090005
+			public const int editTextAge = 2131296261;
 			
-			// aapt resource value: 0x7f06000e
-			public const int editTextKids = 2131099662;
+			// aapt resource value: 0x7f09000e
+			public const int editTextKids = 2131296270;
 			
-			// aapt resource value: 0x7f060002
-			public const int editTextName = 2131099650;
+			// aapt resource value: 0x7f090002
+			public const int editTextName = 2131296258;
 			
-			// aapt resource value: 0x7f060000
-			public const int linearLayout1 = 2131099648;
+			// aapt resource value: 0x7f090000
+			public const int linearLayout1 = 2131296256;
 			
-			// aapt resource value: 0x7f060003
-			public const int linearLayout2 = 2131099651;
+			// aapt resource value: 0x7f090003
+			public const int linearLayout2 = 2131296259;
 			
-			// aapt resource value: 0x7f060006
-			public const int linearLayout3 = 2131099654;
+			// aapt resource value: 0x7f090006
+			public const int linearLayout3 = 2131296262;
 			
-			// aapt resource value: 0x7f06000a
-			public const int linearLayout4 = 2131099658;
+			// aapt resource value: 0x7f09000a
+			public const int linearLayout4 = 2131296266;
 			
-			// aapt resource value: 0x7f06000d
-			public const int linearLayout5 = 2131099661;
+			// aapt resource value: 0x7f09000d
+			public const int linearLayout5 = 2131296269;
 			
-			// aapt resource value: 0x7f060015
-			public const int menuItem = 2131099669;
+			// aapt resource value: 0x7f090015
+			public const int menuItem = 2131296277;
 			
-			// aapt resource value: 0x7f060011
-			public const int radioButtonCareer = 2131099665;
+			// aapt resource value: 0x7f090011
+			public const int radioButtonCareer = 2131296273;
 			
-			// aapt resource value: 0x7f060012
-			public const int radioButtonFamily = 2131099666;
+			// aapt resource value: 0x7f090012
+			public const int radioButtonFamily = 2131296274;
 			
-			// aapt resource value: 0x7f060013
-			public const int radioButtonYourself = 2131099667;
+			// aapt resource value: 0x7f090013
+			public const int radioButtonYourself = 2131296275;
 			
-			// aapt resource value: 0x7f06000f
-			public const int radioGroup1 = 2131099663;
+			// aapt resource value: 0x7f09000f
+			public const int radioGroup1 = 2131296271;
 			
-			// aapt resource value: 0x7f060001
-			public const int textView1 = 2131099649;
+			// aapt resource value: 0x7f090001
+			public const int textView1 = 2131296257;
 			
-			// aapt resource value: 0x7f060007
-			public const int textView13 = 2131099655;
+			// aapt resource value: 0x7f090007
+			public const int textView13 = 2131296263;
 			
-			// aapt resource value: 0x7f060004
-			public const int textView2 = 2131099652;
+			// aapt resource value: 0x7f090004
+			public const int textView2 = 2131296260;
 			
-			// aapt resource value: 0x7f060010
-			public const int textView3 = 2131099664;
+			// aapt resource value: 0x7f090010
+			public const int textView3 = 2131296272;
 			
-			// aapt resource value: 0x7f060014
-			public const int textViewRsult = 2131099668;
+			// aapt resource value: 0x7f090014
+			public const int textViewRsult = 2131296276;
 			
 			static Id()
 			{
@@ -164,8 +205,8 @@ namespace CSW
 		public partial class Menu
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int main = 2131034112;
+			// aapt resource value: 0x7f080000
+			public const int main = 2131230720;
 			
 			static Menu()
 			{
@@ -180,74 +221,74 @@ namespace CSW
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040004
-			public const int Age = 2130968580;
+			// aapt resource value: 0x7f060004
+			public const int Age = 2131099652;
 			
-			// aapt resource value: 0x7f040010
-			public const int Ansver1 = 2130968592;
+			// aapt resource value: 0x7f060010
+			public const int Ansver1 = 2131099664;
 			
-			// aapt resource value: 0x7f040011
-			public const int Ansver2 = 2130968593;
+			// aapt resource value: 0x7f060011
+			public const int Ansver2 = 2131099665;
 			
-			// aapt resource value: 0x7f040012
-			public const int Ansver31 = 2130968594;
+			// aapt resource value: 0x7f060012
+			public const int Ansver31 = 2131099666;
 			
-			// aapt resource value: 0x7f040013
-			public const int Ansver32 = 2130968595;
+			// aapt resource value: 0x7f060013
+			public const int Ansver32 = 2131099667;
 			
-			// aapt resource value: 0x7f040014
-			public const int Ansver4 = 2130968596;
+			// aapt resource value: 0x7f060014
+			public const int Ansver4 = 2131099668;
 			
-			// aapt resource value: 0x7f040015
-			public const int Ansver5 = 2130968597;
+			// aapt resource value: 0x7f060015
+			public const int Ansver5 = 2131099669;
 			
-			// aapt resource value: 0x7f040001
-			public const int ApplicationName = 2130968577;
+			// aapt resource value: 0x7f060001
+			public const int ApplicationName = 2131099649;
 			
-			// aapt resource value: 0x7f040009
-			public const int Boy = 2130968585;
+			// aapt resource value: 0x7f060009
+			public const int Boy = 2131099657;
 			
-			// aapt resource value: 0x7f04000c
-			public const int Career = 2130968588;
+			// aapt resource value: 0x7f06000c
+			public const int Career = 2131099660;
 			
-			// aapt resource value: 0x7f040007
-			public const int Cat = 2130968583;
+			// aapt resource value: 0x7f060007
+			public const int Cat = 2131099655;
 			
-			// aapt resource value: 0x7f040006
-			public const int Dog = 2130968582;
+			// aapt resource value: 0x7f060006
+			public const int Dog = 2131099654;
 			
-			// aapt resource value: 0x7f04000d
-			public const int Family = 2130968589;
+			// aapt resource value: 0x7f06000d
+			public const int Family = 2131099661;
 			
-			// aapt resource value: 0x7f04000a
-			public const int Girl = 2130968586;
+			// aapt resource value: 0x7f06000a
+			public const int Girl = 2131099658;
 			
-			// aapt resource value: 0x7f040000
-			public const int Hello = 2130968576;
+			// aapt resource value: 0x7f060000
+			public const int Hello = 2131099648;
 			
-			// aapt resource value: 0x7f040002
-			public const int IsMarried = 2130968578;
+			// aapt resource value: 0x7f060002
+			public const int IsMarried = 2131099650;
 			
-			// aapt resource value: 0x7f04000f
-			public const int Kids = 2130968591;
+			// aapt resource value: 0x7f06000f
+			public const int Kids = 2131099663;
 			
-			// aapt resource value: 0x7f040003
-			public const int Name = 2130968579;
+			// aapt resource value: 0x7f060003
+			public const int Name = 2131099651;
 			
-			// aapt resource value: 0x7f040008
-			public const int Partner = 2130968584;
+			// aapt resource value: 0x7f060008
+			public const int Partner = 2131099656;
 			
-			// aapt resource value: 0x7f040005
-			public const int Pet = 2130968581;
+			// aapt resource value: 0x7f060005
+			public const int Pet = 2131099653;
 			
-			// aapt resource value: 0x7f04000b
-			public const int Prioryty = 2130968587;
+			// aapt resource value: 0x7f06000b
+			public const int Prioryty = 2131099659;
 			
-			// aapt resource value: 0x7f04000e
-			public const int Yourself = 2130968590;
+			// aapt resource value: 0x7f06000e
+			public const int Yourself = 2131099662;
 			
-			// aapt resource value: 0x7f040016
-			public const int menuItem = 2130968598;
+			// aapt resource value: 0x7f060016
+			public const int menuItem = 2131099670;
 			
 			static String()
 			{
@@ -255,6 +296,31 @@ namespace CSW
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f070000
+			public const int EnterFild = 2131165184;
+			
+			// aapt resource value: 0x7f070002
+			public const int LeftTextSize = 2131165186;
+			
+			// aapt resource value: 0x7f070003
+			public const int LibelSize = 2131165187;
+			
+			// aapt resource value: 0x7f070001
+			public const int TextSize = 2131165185;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}
