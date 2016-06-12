@@ -25,7 +25,8 @@ namespace CSW
         RadioButton careerRadioButton;
         RadioButton familyRadioButton;
         RadioButton yourselfRadioButton;
-        TextView ansver;
+        Button clearButton;
+        string result;
         #endregion
 
         protected override void OnCreate(Bundle bundle)
@@ -37,9 +38,27 @@ namespace CSW
 
             InitControls();
 
+            clearButton.Click += ClearButton_Click;
+
+            ClearButton_Click(new object(), new EventArgs());
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
             kidsText.SetBackgroundColor(Color.LightGray);
             ageText.SetBackgroundColor(Color.LightGray);
             nameText.SetBackgroundColor(Color.LightGray);
+
+            kidsText.Text = string.Empty;
+            ageText.Text = string.Empty;
+            nameText.Text = string.Empty;
+
+            dogCheckBox.Checked = false;
+            catCheckBox.Checked = false;
+            girlCheckBox.Checked = false;
+            boyCheckBox.Checked = false;
+
+            FragmentManager.BeginTransaction().Replace(Resource.Id.fragment_container, new FragmentDefault()).Commit();
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -74,7 +93,8 @@ namespace CSW
             careerRadioButton = FindViewById<RadioButton>(Resource.Id.radioButtonCareer);
             familyRadioButton = FindViewById<RadioButton>(Resource.Id.radioButtonFamily);
             yourselfRadioButton = FindViewById<RadioButton>(Resource.Id.radioButtonYourself);
-            ansver = FindViewById<TextView>(Resource.Id.textViewRsult);
+            clearButton = FindViewById<Button>(Resource.Id.buttonClean);
+
         }
 
         private void CalcButton_Click()
@@ -86,6 +106,9 @@ namespace CSW
             int input = GetInputValue();
 
             GetResult(input);
+
+            FragmentManager.BeginTransaction().Replace(Resource.Id.fragment_container, new FragmentResult(result)).Commit();
+
         }
 
         private int GetInputValue()
@@ -138,22 +161,22 @@ namespace CSW
             switch (index)
             {
                 case 1:
-                    ansver.Text = nameText.Text + "\n" + GetString(Resource.String.Ansver1);
+                    result = nameText.Text + "\n" + GetString(Resource.String.Ansver1);
                     break;
                 case 2:
-                    ansver.Text = nameText.Text + "\n" + GetString(Resource.String.Ansver2);
+                    result = nameText.Text + "\n" + GetString(Resource.String.Ansver2);
                     break;
                 case 31:
-                    ansver.Text = nameText.Text + "\n" + GetString(Resource.String.Ansver31);
+                    result = nameText.Text + "\n" + GetString(Resource.String.Ansver31);
                     break;
                 case 32:
-                    ansver.Text = nameText.Text + "\n" + GetString(Resource.String.Ansver32);
+                    result = nameText.Text + "\n" + GetString(Resource.String.Ansver32);
                     break;
                 case 4:
-                    ansver.Text = nameText.Text + "\n" + GetString(Resource.String.Ansver4);
+                    result = nameText.Text + "\n" + GetString(Resource.String.Ansver4);
                     break;
                 default:
-                    ansver.Text = nameText.Text + "\n" + GetString(Resource.String.Ansver5);
+                    result = nameText.Text + "\n" + GetString(Resource.String.Ansver5);
                     break;
             }
         }

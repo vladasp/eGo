@@ -14,13 +14,11 @@
             android:scaleType="fitStart"
             android:layout_weight="1" />
         <LinearLayout
-            android:orientation="horizontal"
-            android:id="@+id/linearLayout1">
+            android:orientation="horizontal">
             <TextView
-                style="@style/LibelSize"
+                style="@style/LabelSize"
                 android:text="@string/Name"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/textView1"
                 android:textColor="@color/dirty_green"
                 android:layout_height="match_parent" />
             <EditText
@@ -31,13 +29,11 @@
                 android:layout_height="match_parent" />
         </LinearLayout>
         <LinearLayout
-            android:orientation="horizontal"
-            android:id="@+id/linearLayout2">
+            android:orientation="horizontal">
             <TextView
-                style="@style/LibelSize"
+                style="@style/LabelSize"
                 android:text="@string/Age"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/textView2"
                 android:textColor="@color/dirty_green"
                 android:layout_height="match_parent" />
             <EditText
@@ -48,13 +44,11 @@
                 android:layout_height="match_parent" />
         </LinearLayout>
         <LinearLayout
-            android:orientation="horizontal"
-            android:id="@+id/linearLayout3">
+            android:orientation="horizontal">
             <TextView
-                style="@style/LibelSize"
+                style="@style/LabelSize"
                 android:text="@string/Pet"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/textView13"
                 android:textColor="@color/dirty_green"
                 android:layout_height="match_parent" />
             <CheckBox
@@ -71,13 +65,11 @@
                 android:layout_height="match_parent" />
         </LinearLayout>
         <LinearLayout
-            android:orientation="horizontal"
-            android:id="@+id/linearLayout4">
+            android:orientation="horizontal">
             <TextView
-                style="@style/LibelSize"
+                style="@style/LabelSize"
                 android:text="@string/Partner"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/textView13"
                 android:textColor="@color/dirty_green"
                 android:layout_height="match_parent" />
             <CheckBox
@@ -94,14 +86,12 @@
                 android:layout_height="match_parent" />
         </LinearLayout>
         <LinearLayout
-            android:orientation="horizontal"
-            android:id="@+id/linearLayout5">
+            android:orientation="horizontal">
             <TextView
+                style="@style/LabelSize"
                 android:text="@string/Kids"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/textView13"
                 android:textColor="@color/dirty_green"
-                android:layout_width="160dp"
                 android:layout_height="match_parent" />
             <EditText
                 style="@style/EnterFild"
@@ -112,13 +102,11 @@
         </LinearLayout>
         <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/radioGroup1">
+            android:layout_height="wrap_content">
             <TextView
                 style="@style/EnterFild"
                 android:text="@string/Prioryty"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/textView3"
                 android:layout_column="0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -130,7 +118,7 @@
                 android:layout_height="wrap_content"
                 android:checked="true"
                 android:text="@string/Career"
-                android:id="@+id/radioButtonCareer" />
+                android:id="@+id/radioButtonCareer"/>
             <RadioButton
                 style="@style/TextSize"
                 android:layout_width="wrap_content"
@@ -144,12 +132,23 @@
                 android:text="@string/Yourself"
                 android:id="@+id/radioButtonYourself" />
         </RadioGroup>
-        <TextView
-            android:textAppearance="?android:attr/textAppearanceLarge"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:minWidth="25px"
+            android:minHeight="25px"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textViewRsult"
-            android:textColor="@color/dirty_red"
-            android:layout_gravity="center" />
+            android:id="@+id/fragment_container" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px">
+            <Button
+                android:text="@string/Clean"
+                android:id="@+id/buttonClean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </LinearLayout>
     </TableLayout>
 </ScrollView>

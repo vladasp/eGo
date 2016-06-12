@@ -16,8 +16,13 @@
     <string name="Family">Family</string>
     <string name="Yourself">Yourself</string>
     <string name="Kids"> Amount of kids</string>
-  
-    <string name="Ansver1">You are too small for this calculator</string>
+    <string name="Result"> Result</string>
+    <string name="Back"> Back</string>
+    <string name="Clean"> Clean</string>
+   <string name="Default">Default</string>
+
+
+  <string name="Ansver1">You are too small for this calculator</string>
     <string name="Ansver2">You are the one who reaches goals</string>
     <string name="Ansver31">You are great mother and wife!</string>
     <string name="Ansver32">You will be great mother and wife!</string>

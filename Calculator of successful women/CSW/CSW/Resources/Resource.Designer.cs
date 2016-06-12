@@ -110,71 +110,50 @@ namespace CSW
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f09000c
-			public const int checkBoxBoy = 2131296268;
+			// aapt resource value: 0x7f09000d
+			public const int buttonClean = 2131296269;
 			
-			// aapt resource value: 0x7f090008
-			public const int checkBoxCat = 2131296264;
+			// aapt resource value: 0x7f090007
+			public const int checkBoxBoy = 2131296263;
 			
-			// aapt resource value: 0x7f090009
-			public const int checkBoxDog = 2131296265;
-			
-			// aapt resource value: 0x7f09000b
-			public const int checkBoxGirl = 2131296267;
+			// aapt resource value: 0x7f090004
+			public const int checkBoxCat = 2131296260;
 			
 			// aapt resource value: 0x7f090005
-			public const int editTextAge = 2131296261;
+			public const int checkBoxDog = 2131296261;
 			
-			// aapt resource value: 0x7f09000e
-			public const int editTextKids = 2131296270;
+			// aapt resource value: 0x7f090006
+			public const int checkBoxGirl = 2131296262;
+			
+			// aapt resource value: 0x7f090003
+			public const int editTextAge = 2131296259;
+			
+			// aapt resource value: 0x7f090008
+			public const int editTextKids = 2131296264;
 			
 			// aapt resource value: 0x7f090002
 			public const int editTextName = 2131296258;
 			
-			// aapt resource value: 0x7f090000
-			public const int linearLayout1 = 2131296256;
+			// aapt resource value: 0x7f09000c
+			public const int fragment_container = 2131296268;
 			
-			// aapt resource value: 0x7f090003
-			public const int linearLayout2 = 2131296259;
+			// aapt resource value: 0x7f09000e
+			public const int menuItem = 2131296270;
 			
-			// aapt resource value: 0x7f090006
-			public const int linearLayout3 = 2131296262;
+			// aapt resource value: 0x7f090009
+			public const int radioButtonCareer = 2131296265;
 			
 			// aapt resource value: 0x7f09000a
-			public const int linearLayout4 = 2131296266;
+			public const int radioButtonFamily = 2131296266;
 			
-			// aapt resource value: 0x7f09000d
-			public const int linearLayout5 = 2131296269;
-			
-			// aapt resource value: 0x7f090015
-			public const int menuItem = 2131296277;
-			
-			// aapt resource value: 0x7f090011
-			public const int radioButtonCareer = 2131296273;
-			
-			// aapt resource value: 0x7f090012
-			public const int radioButtonFamily = 2131296274;
-			
-			// aapt resource value: 0x7f090013
-			public const int radioButtonYourself = 2131296275;
-			
-			// aapt resource value: 0x7f09000f
-			public const int radioGroup1 = 2131296271;
+			// aapt resource value: 0x7f09000b
+			public const int radioButtonYourself = 2131296267;
 			
 			// aapt resource value: 0x7f090001
-			public const int textView1 = 2131296257;
+			public const int textResult = 2131296257;
 			
-			// aapt resource value: 0x7f090007
-			public const int textView13 = 2131296263;
-			
-			// aapt resource value: 0x7f090004
-			public const int textView2 = 2131296260;
-			
-			// aapt resource value: 0x7f090010
-			public const int textView3 = 2131296272;
-			
-			// aapt resource value: 0x7f090014
-			public const int textViewRsult = 2131296276;
+			// aapt resource value: 0x7f090000
+			public const int textView1 = 2131296256;
 			
 			static Id()
 			{
@@ -190,7 +169,13 @@ namespace CSW
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int fragment_default = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int fragment_result = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int Main = 2130903042;
 			
 			static Layout()
 			{
@@ -224,26 +209,29 @@ namespace CSW
 			// aapt resource value: 0x7f060004
 			public const int Age = 2131099652;
 			
-			// aapt resource value: 0x7f060010
-			public const int Ansver1 = 2131099664;
-			
-			// aapt resource value: 0x7f060011
-			public const int Ansver2 = 2131099665;
-			
-			// aapt resource value: 0x7f060012
-			public const int Ansver31 = 2131099666;
-			
-			// aapt resource value: 0x7f060013
-			public const int Ansver32 = 2131099667;
-			
 			// aapt resource value: 0x7f060014
-			public const int Ansver4 = 2131099668;
+			public const int Ansver1 = 2131099668;
 			
 			// aapt resource value: 0x7f060015
-			public const int Ansver5 = 2131099669;
+			public const int Ansver2 = 2131099669;
+			
+			// aapt resource value: 0x7f060016
+			public const int Ansver31 = 2131099670;
+			
+			// aapt resource value: 0x7f060017
+			public const int Ansver32 = 2131099671;
+			
+			// aapt resource value: 0x7f060018
+			public const int Ansver4 = 2131099672;
+			
+			// aapt resource value: 0x7f060019
+			public const int Ansver5 = 2131099673;
 			
 			// aapt resource value: 0x7f060001
 			public const int ApplicationName = 2131099649;
+			
+			// aapt resource value: 0x7f060011
+			public const int Back = 2131099665;
 			
 			// aapt resource value: 0x7f060009
 			public const int Boy = 2131099657;
@@ -253,6 +241,12 @@ namespace CSW
 			
 			// aapt resource value: 0x7f060007
 			public const int Cat = 2131099655;
+			
+			// aapt resource value: 0x7f060012
+			public const int Clean = 2131099666;
+			
+			// aapt resource value: 0x7f060013
+			public const int Default = 2131099667;
 			
 			// aapt resource value: 0x7f060006
 			public const int Dog = 2131099654;
@@ -284,11 +278,14 @@ namespace CSW
 			// aapt resource value: 0x7f06000b
 			public const int Prioryty = 2131099659;
 			
+			// aapt resource value: 0x7f060010
+			public const int Result = 2131099664;
+			
 			// aapt resource value: 0x7f06000e
 			public const int Yourself = 2131099662;
 			
-			// aapt resource value: 0x7f060016
-			public const int menuItem = 2131099670;
+			// aapt resource value: 0x7f06001a
+			public const int menuItem = 2131099674;
 			
 			static String()
 			{
@@ -306,11 +303,11 @@ namespace CSW
 			// aapt resource value: 0x7f070000
 			public const int EnterFild = 2131165184;
 			
+			// aapt resource value: 0x7f070003
+			public const int LabelSize = 2131165187;
+			
 			// aapt resource value: 0x7f070002
 			public const int LeftTextSize = 2131165186;
-			
-			// aapt resource value: 0x7f070003
-			public const int LibelSize = 2131165187;
 			
 			// aapt resource value: 0x7f070001
 			public const int TextSize = 2131165185;

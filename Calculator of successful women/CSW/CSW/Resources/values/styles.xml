@@ -14,7 +14,7 @@
     <item name="android:layout_marginRight">15dp</item>
   </style>
 
-  <style name="LibelSize">
+  <style name="LabelSize">
     <item name="android:layout_width">160dp</item>
   </style>
 
