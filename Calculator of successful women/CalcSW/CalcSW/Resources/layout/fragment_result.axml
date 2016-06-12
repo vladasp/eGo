@@ -12,10 +12,10 @@
         android:id="@+id/textView1"
         android:textColor="@color/dirty_green"
         android:layout_gravity="center" />
-  <TextView
+    <TextView
         style="@style/EnterFild"
         android:id="@+id/textResult"
         android:textColor="@color/dirty_red"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 </LinearLayout>

@@ -3,6 +3,7 @@
   
   <style name="EnterFild">
     <item name="android:layout_margin">5dp</item>
+    <item name="android:textSize">20dp</item>
   </style>
 
   <style name="TextSize">

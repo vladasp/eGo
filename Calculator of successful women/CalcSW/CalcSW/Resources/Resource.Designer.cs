@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("CSW.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("CalcSW.Resource", IsApplication=true)]
 
-namespace CSW
+namespace CalcSW
 {
 	
 	
@@ -89,13 +89,10 @@ namespace CSW
 			public const int ic_android_white_24dp = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int ic_directions_boat_black_24dp = 2130837505;
+			public const int ic_directions_boat_white_24dp = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int ic_directions_boat_white_24dp = 2130837506;
-			
-			// aapt resource value: 0x7f020003
-			public const int Icon = 2130837507;
+			public const int Icon = 2130837506;
 			
 			static Drawable()
 			{

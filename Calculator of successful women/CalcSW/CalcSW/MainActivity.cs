@@ -7,11 +7,12 @@ using Android.Widget;
 using Android.OS;
 using Android.Graphics;
 
-namespace CSW
+namespace CalcSW
 {
-    [Activity(Label = "CSW", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "CalcSW", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
+
         #region Initial fields
         CheckBox catCheckBox;
         CheckBox dogCheckBox;
@@ -31,10 +32,14 @@ namespace CSW
 
         protected override void OnCreate(Bundle bundle)
         {
+            Console.WriteLine("Created activity");
+
             base.OnCreate(bundle);
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
+
+            Console.WriteLine("Created layout");
 
             InitControls();
 
@@ -108,7 +113,6 @@ namespace CSW
             GetResult(input);
 
             FragmentManager.BeginTransaction().Replace(Resource.Id.fragment_container, new FragmentResult(result)).Commit();
-
         }
 
         private int GetInputValue()
