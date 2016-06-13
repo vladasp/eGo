@@ -92,7 +92,10 @@ namespace CalcSW
 			public const int ic_directions_boat_white_24dp = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int Icon = 2130837506;
+			public const int ic_do_not_disturb_on_white_24dp = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int Icon = 2130837507;
 			
 			static Drawable()
 			{
@@ -106,9 +109,6 @@ namespace CalcSW
 		
 		public partial class Id
 		{
-			
-			// aapt resource value: 0x7f09000d
-			public const int buttonClean = 2131296269;
 			
 			// aapt resource value: 0x7f090007
 			public const int checkBoxBoy = 2131296263;
@@ -135,7 +135,10 @@ namespace CalcSW
 			public const int fragment_container = 2131296268;
 			
 			// aapt resource value: 0x7f09000e
-			public const int menuItem = 2131296270;
+			public const int menuClear = 2131296270;
+			
+			// aapt resource value: 0x7f09000d
+			public const int menuItem = 2131296269;
 			
 			// aapt resource value: 0x7f090009
 			public const int radioButtonCareer = 2131296265;

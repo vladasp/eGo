@@ -14,23 +14,25 @@ namespace CalcSW
 {
     class FragmentResult: Fragment
     {
+        View v;
         TextView resultTW;
         string _result;
-        
-        public FragmentResult(string result)
-        {
-            _result = result;
-        }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            var v = inflater.Inflate(Resource.Layout.fragment_result, container, false);
-
+            v = inflater.Inflate(Resource.Layout.fragment_result, container, false);
             resultTW = v.FindViewById<TextView>(Resource.Id.textResult);
-
             resultTW.Text = _result;
-
             return v;
+        }
+
+        public void UpdateAnswer(string result)
+        {
+            _result = result;
+            if (resultTW != null)
+            {
+                resultTW.Text = _result;
+            }
         }
 
     }

@@ -26,8 +26,9 @@ namespace CalcSW
         RadioButton careerRadioButton;
         RadioButton familyRadioButton;
         RadioButton yourselfRadioButton;
-        Button clearButton;
         string result;
+        FragmentResult resultFragment;
+        FragmentDefault defultFragment;
         #endregion
 
         protected override void OnCreate(Bundle bundle)
@@ -43,12 +44,10 @@ namespace CalcSW
 
             InitControls();
 
-            clearButton.Click += ClearButton_Click;
-
-            ClearButton_Click(new object(), new EventArgs());
+            Clear();
         }
 
-        private void ClearButton_Click(object sender, EventArgs e)
+        void Clear()
         {
             kidsText.SetBackgroundColor(Color.LightGray);
             ageText.SetBackgroundColor(Color.LightGray);
@@ -63,13 +62,12 @@ namespace CalcSW
             girlCheckBox.Checked = false;
             boyCheckBox.Checked = false;
 
-            FragmentManager.BeginTransaction().Replace(Resource.Id.fragment_container, new FragmentDefault()).Commit();
+            FragmentManager.BeginTransaction().Replace(Resource.Id.fragment_container, defultFragment).Commit();
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             MenuInflater.Inflate(Resource.Menu.main, menu);
-
             return base.OnCreateOptionsMenu(menu);
         }
 
@@ -79,6 +77,9 @@ namespace CalcSW
             {
                 case Resource.Id.menuItem:
                     CalcButton_Click();
+                    return true;
+                case Resource.Id.menuClear:
+                    Clear();
                     return true;
                 default:
                     return base.OnOptionsItemSelected(item);
@@ -98,8 +99,8 @@ namespace CalcSW
             careerRadioButton = FindViewById<RadioButton>(Resource.Id.radioButtonCareer);
             familyRadioButton = FindViewById<RadioButton>(Resource.Id.radioButtonFamily);
             yourselfRadioButton = FindViewById<RadioButton>(Resource.Id.radioButtonYourself);
-            clearButton = FindViewById<Button>(Resource.Id.buttonClean);
-
+            resultFragment = new FragmentResult();
+            defultFragment = new FragmentDefault();
         }
 
         private void CalcButton_Click()
@@ -112,7 +113,9 @@ namespace CalcSW
 
             GetResult(input);
 
-            FragmentManager.BeginTransaction().Replace(Resource.Id.fragment_container, new FragmentResult(result)).Commit();
+            FragmentManager.BeginTransaction().Replace(Resource.Id.fragment_container, resultFragment).Commit();
+
+            resultFragment.UpdateAnswer(result);
         }
 
         private int GetInputValue()

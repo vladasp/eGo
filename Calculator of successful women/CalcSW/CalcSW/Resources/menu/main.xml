@@ -7,4 +7,9 @@
      android:title="@string/menuItem"
      android:icon="@drawable/ic_directions_boat_White_24dp">
   </item>
+  <item
+     android:id="@+id/menuClear"
+     android:showAsAction="always"
+     android:icon="@drawable/ic_do_not_disturb_on_white_24dp">
+  </item>
 </menu>
