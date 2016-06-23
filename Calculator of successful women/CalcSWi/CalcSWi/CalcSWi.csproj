@@ -91,6 +91,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Results.cs" />
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
@@ -108,6 +109,7 @@
     <Content Include="Entitlements.plist" />
     <BundleResource Include="ic_directions_boat_white_24dp.png" />
     <BundleResource Include="ic_do_not_disturb_on_white_24dp.png" />
+    <BundleResource Include="ic_android_white_24dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

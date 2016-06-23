@@ -5,347 +5,6 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="18" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="152" y="0.0" width="160" height="240"/>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <rect key="frame" x="0.0" y="63" width="320" height="417"/>
-                                    <mask key="subviews">
-                                        <include reference="17"/>
-                                        <include reference="16"/>
-                                        <include reference="15"/>
-                                        <include reference="14"/>
-                                        <include reference="3"/>
-                                        <include reference="19"/>
-                                        <include reference="20"/>
-                                        <include reference="21"/>
-                                        <include reference="28"/>
-                                        <include reference="34"/>
-                                        <include reference="153"/>
-                                        <include reference="154"/>
-                                        <include reference="155"/>
-                                        <include reference="158"/>
-                                        <include reference="159"/>
-                                        <include reference="160"/>
-                                        <include reference="161"/>
-                                        <include reference="168"/>
-                                    </mask>
-                                    <mask key="constraints">
-                                        <include reference="130"/>
-                                        <include reference="131"/>
-                                        <include reference="132"/>
-                                        <include reference="133"/>
-                                        <include reference="134"/>
-                                        <include reference="135"/>
-                                        <include reference="136"/>
-                                        <include reference="137"/>
-                                        <include reference="138"/>
-                                        <include reference="139"/>
-                                        <include reference="140"/>
-                                        <include reference="141"/>
-                                        <include reference="142"/>
-                                        <include reference="143"/>
-                                        <include reference="144"/>
-                                        <include reference="172"/>
-                                        <include reference="173"/>
-                                        <include reference="174"/>
-                                        <include reference="175"/>
-                                        <include reference="176"/>
-                                        <include reference="177"/>
-                                        <include reference="178"/>
-                                        <include reference="179"/>
-                                        <include reference="180"/>
-                                    </mask>
-                                </variation>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="17" translatesAutoresizingMaskIntoConstraints="NO" text="Amount of kids">
-                                        <rect key="frame" x="199" y="158" width="42" height="21"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <color key="textColor" cocoaTouchSystemColor="{&quot;Mode&quot;:3,&quot;CalibratedColor&quot;:{&quot;Inverted&quot;:false,&quot;Alpha&quot;:0.0,&quot;Shade&quot;:0.0},&quot;NamedSystemColor&quot;:&quot;{\&quot;Mode\&quot;:3,\&quot;CalibratedColor\&quot;:{\&quot;Inverted\&quot;:false,\&quot;Alpha\&quot;:0.0,\&quot;Shade\&quot;:0.0},\&quot;NamedSystemColor\&quot;:\&quot;darkTextColor\&quot;,\&quot;RgbColor\&quot;:\&quot;#00000000\&quot;}&quot;,&quot;RgbColor&quot;:&quot;#00000000&quot;}"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <rect key="frame" x="10" y="120" width="120" height="20"/>
-                                        </variation>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" pointSize="17"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Life partner" lineBreakMode="tailTruncation" minimumFontSize="10" id="16" translatesAutoresizingMaskIntoConstraints="NO">
-                                        <rect key="frame" x="199" y="158" width="42" height="21"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <rect key="frame" x="10" y="80" width="90" height="20"/>
-                                        </variation>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pet" lineBreakMode="tailTruncation" minimumFontSize="10" id="15" translatesAutoresizingMaskIntoConstraints="NO">
-                                        <rect key="frame" x="199" y="158" width="42" height="21"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <rect key="frame" x="10" y="40" width="90" height="21"/>
-                                        </variation>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Age" lineBreakMode="tailTruncation" minimumFontSize="10" id="14" translatesAutoresizingMaskIntoConstraints="NO">
-                                        <rect key="frame" x="199" y="158" width="42" height="21"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <rect key="frame" x="10" y="0.0" width="120" height="20"/>
-                                        </variation>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" lineBreakMode="tailTruncation" minimumFontSize="10" id="3" translatesAutoresizingMaskIntoConstraints="NO">
-                                        <rect key="frame" x="199" y="158" width="42" height="21"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <rect key="frame" x="10" y="-40" width="120" height="20"/>
-                                        </variation>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" id="19" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                        <rect key="frame" x="178" y="56" width="97" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="140" y="-40" width="170" height="30"/>
-                                        </variation>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" id="20" translatesAutoresizingMaskIntoConstraints="NO">
-                                        <rect key="frame" x="178" y="56" width="97" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <rect key="frame" x="137" y="120" width="172" height="30"/>
-                                        </variation>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" minimumFontSize="17" id="21" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                        <rect key="frame" x="178" y="56" width="97" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="140" y="0.0" width="170" height="30"/>
-                                        </variation>
-                                    </textField>
-                                    <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="28" fixedFrame="YES">
-                                        <rect key="frame" x="226" y="330" width="51" height="31"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="160" y="35" width="51" height="31"/>
-                                        </variation>
-                                    </switch>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="34">
-                                        <rect key="frame" x="124" y="294" width="123" height="29"/>
-                                        <segments>
-                                            <segment title="First"/>
-                                            <segment title="Second"/>
-                                            <segment title="3"/>
-                                        </segments>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <rect key="frame" x="10" y="190" width="300" height="29"/>
-                                        </variation>
-                                        <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
-                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    </segmentedControl>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Cat" lineBreakMode="tailTruncation" minimumFontSize="10" id="153" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                        <rect key="frame" x="199" y="158" width="42" height="21"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="130" y="40" width="30" height="20"/>
-                                        </variation>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dog" lineBreakMode="tailTruncation" minimumFontSize="10" id="154" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                        <rect key="frame" x="199" y="158" width="42" height="21"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="220" y="40" width="35" height="20"/>
-                                        </variation>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="155" fixedFrame="YES">
-                                        <rect key="frame" x="226" y="330" width="51" height="31"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="260" y="35" width="51" height="31"/>
-                                        </variation>
-                                    </switch>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Girl" lineBreakMode="tailTruncation" minimumFontSize="10" id="158" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                        <rect key="frame" x="199" y="158" width="42" height="21"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="130" y="80" width="30" height="21"/>
-                                        </variation>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="159" fixedFrame="YES">
-                                        <rect key="frame" x="226" y="330" width="51" height="31"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="160" y="75" width="51" height="31"/>
-                                        </variation>
-                                    </switch>
-                                    <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="160" fixedFrame="YES">
-                                        <rect key="frame" x="226" y="330" width="51" height="31"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="260" y="75" width="51" height="31"/>
-                                        </variation>
-                                    </switch>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Boy" lineBreakMode="tailTruncation" minimumFontSize="10" id="161" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                        <rect key="frame" x="199" y="158" width="42" height="21"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="220" y="80" width="35" height="20"/>
-                                        </variation>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="168" translatesAutoresizingMaskIntoConstraints="NO" text="Life priority">
-                                        <rect key="frame" x="199" y="158" width="42" height="21"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <color key="textColor" cocoaTouchSystemColor="{&quot;Mode&quot;:3,&quot;CalibratedColor&quot;:{&quot;Inverted&quot;:false,&quot;Alpha&quot;:0.0,&quot;Shade&quot;:0.0},&quot;NamedSystemColor&quot;:&quot;{\&quot;Mode\&quot;:3,\&quot;CalibratedColor\&quot;:{\&quot;Inverted\&quot;:false,\&quot;Alpha\&quot;:0.0,\&quot;Shade\&quot;:0.0},\&quot;NamedSystemColor\&quot;:\&quot;darkTextColor\&quot;,\&quot;RgbColor\&quot;:\&quot;#00000000\&quot;}&quot;,&quot;RgbColor&quot;:&quot;#00000000&quot;}"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <rect key="frame" x="120" y="160" width="90" height="20"/>
-                                        </variation>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" pointSize="17"/>
-                                    </label>
-                                </subviews>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="17"/>
-                                        <exclude reference="16"/>
-                                        <exclude reference="15"/>
-                                        <exclude reference="14"/>
-                                        <exclude reference="3"/>
-                                        <exclude reference="19"/>
-                                        <exclude reference="20"/>
-                                        <exclude reference="21"/>
-                                        <exclude reference="28"/>
-                                        <exclude reference="34"/>
-                                        <exclude reference="153"/>
-                                        <exclude reference="154"/>
-                                        <exclude reference="155"/>
-                                        <exclude reference="158"/>
-                                        <exclude reference="159"/>
-                                        <exclude reference="160"/>
-                                        <exclude reference="161"/>
-                                        <exclude reference="168"/>
-                                    </mask>
-                                    <mask key="constraints">
-                                        <exclude reference="130"/>
-                                        <exclude reference="131"/>
-                                        <exclude reference="132"/>
-                                        <exclude reference="133"/>
-                                        <exclude reference="134"/>
-                                        <exclude reference="135"/>
-                                        <exclude reference="136"/>
-                                        <exclude reference="137"/>
-                                        <exclude reference="138"/>
-                                        <exclude reference="139"/>
-                                        <exclude reference="140"/>
-                                        <exclude reference="141"/>
-                                        <exclude reference="142"/>
-                                        <exclude reference="143"/>
-                                        <exclude reference="144"/>
-                                        <exclude reference="172"/>
-                                        <exclude reference="173"/>
-                                        <exclude reference="174"/>
-                                        <exclude reference="175"/>
-                                        <exclude reference="176"/>
-                                        <exclude reference="177"/>
-                                        <exclude reference="178"/>
-                                        <exclude reference="179"/>
-                                        <exclude reference="180"/>
-                                    </mask>
-                                </variation>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <constraints>
-                                    <constraint id="130" firstItem="3" firstAttribute="top" secondItem="18" secondAttribute="top" constant="24"/>
-                                    <constraint id="131" firstItem="3" firstAttribute="leading" secondItem="18" secondAttribute="leading" constant="10"/>
-                                    <constraint id="132" firstItem="18" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" constant="190"/>
-                                    <constraint id="133" firstItem="14" firstAttribute="top" secondItem="3" secondAttribute="bottom" constant="10"/>
-                                    <constraint id="134" firstItem="14" firstAttribute="leading" secondItem="18" secondAttribute="leading" constant="10"/>
-                                    <constraint id="135" firstItem="18" firstAttribute="trailing" secondItem="14" secondAttribute="trailing" constant="190"/>
-                                    <constraint id="136" firstItem="15" firstAttribute="leading" secondItem="18" secondAttribute="leading" constant="10"/>
-                                    <constraint id="137" firstItem="15" firstAttribute="top" secondItem="14" secondAttribute="bottom" constant="10"/>
-                                    <constraint id="138" firstItem="18" firstAttribute="trailing" secondItem="15" secondAttribute="trailing" constant="192"/>
-                                    <constraint id="139" firstItem="16" firstAttribute="top" secondItem="15" secondAttribute="bottom" constant="9"/>
-                                    <constraint id="140" firstItem="16" firstAttribute="leading" secondItem="18" secondAttribute="leading" constant="10"/>
-                                    <constraint id="141" firstItem="18" firstAttribute="trailing" secondItem="16" secondAttribute="trailing" constant="192"/>
-                                    <constraint id="142" firstItem="17" firstAttribute="top" secondItem="16" secondAttribute="bottom" constant="9"/>
-                                    <constraint id="143" firstItem="17" firstAttribute="leading" secondItem="18" secondAttribute="leading" constant="10"/>
-                                    <constraint id="144" firstItem="18" firstAttribute="trailing" secondItem="17" secondAttribute="trailing" constant="192"/>
-                                    <constraint id="172" firstItem="18" firstAttribute="trailing" secondItem="168" secondAttribute="trailing" constant="110"/>
-                                    <constraint id="173" firstItem="168" firstAttribute="leading" secondItem="18" secondAttribute="leading" constant="120"/>
-                                    <constraint id="174" firstItem="168" firstAttribute="top" secondItem="20" secondAttribute="bottom" constant="10"/>
-                                    <constraint id="175" firstItem="168" firstAttribute="top" secondItem="20" secondAttribute="bottom" constant="10"/>
-                                    <constraint id="176" firstItem="wfy-db-euE" firstAttribute="top" secondItem="168" secondAttribute="bottom" constant="173"/>
-                                    <constraint id="177" firstItem="34" firstAttribute="leading" secondItem="18" secondAttribute="leading" constant="10"/>
-                                    <constraint id="178" firstItem="34" firstAttribute="top" secondItem="168" secondAttribute="bottom" constant="10"/>
-                                    <constraint id="179" firstItem="18" firstAttribute="trailing" secondItem="34" secondAttribute="trailing" constant="10"/>
-                                    <constraint id="180" firstItem="18" firstAttribute="bottom" secondItem="34" secondAttribute="bottom" constant="134"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="18"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="123"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="18"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="123"/>
-                            </mask>
-                        </variation>
-                        <constraints>
-                            <constraint id="123" firstItem="y3c-jy-aDJ" firstAttribute="bottom" secondItem="18" secondAttribute="top" constant="1"/>
-                        </constraints>
-                    </view>
-                    <navigationItem title="Main" id="120" key="navigationItem">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="182">
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="181" translatesAutoresizingMaskIntoConstraints="NO" key="customView">
-                                <rect key="frame" x="246" y="8" width="46" height="30"/>
-                                <state key="normal" image="ic_directions_boat_white_24dp.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                                </variation>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-18" y="-16"/>
-        </scene>
         <scene sceneID="39">
             <objects>
                 <navigationController definesPresentationContext="YES" id="40" sceneMemberID="viewController">
@@ -354,19 +13,399 @@
                         <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                     </navigationBar>
                     <connections>
-                        <segue id="121" destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController"/>
+                        <segue id="761" destination="567" kind="relationship" relationship="rootViewController"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-404" y="2"/>
+            <point key="canvasLocation" x="-931" y="-85"/>
+        </scene>
+        <scene sceneID="566">
+            <objects>
+                <viewController id="567" sceneMemberID="viewController" customClass="ViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="564"/>
+                        <viewControllerLayoutGuide type="bottom" id="565"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="568">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.41176470588235292" green="0.48627450980392156" blue="0.41176470588235292" alpha="1"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="764" translatesAutoresizingMaskIntoConstraints="NO" image="ic_android_white_24dp.png">
+                                <rect key="frame" x="10" y="70" width="30" height="30"/>
+                                <constraints>
+                                    <constraint id="769" firstItem="764" firstAttribute="height" constant="30"/>
+                                    <constraint id="770" firstItem="764" firstAttribute="width" constant="30"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="772" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="108" width="600" height="46"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="1" blue="0" alpha="1"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" lineBreakMode="tailTruncation" minimumFontSize="10" id="776" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="7" y="12" width="120" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <constraints>
+                                            <constraint id="787" firstItem="776" firstAttribute="height" constant="21"/>
+                                            <constraint id="884" firstItem="776" firstAttribute="width" constant="120"/>
+                                        </constraints>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="780" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="137" y="8" width="453" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="777" firstItem="776" firstAttribute="top" secondItem="772" secondAttribute="top" constant="12"/>
+                                    <constraint id="778" firstItem="772" firstAttribute="bottom" secondItem="776" secondAttribute="bottom" constant="13"/>
+                                    <constraint id="779" firstItem="776" firstAttribute="leading" secondItem="772" secondAttribute="leading" constant="7"/>
+                                    <constraint id="782" firstItem="780" firstAttribute="top" secondItem="772" secondAttribute="top" constant="8"/>
+                                    <constraint id="783" firstItem="772" firstAttribute="bottom" secondItem="780" secondAttribute="bottom" constant="8"/>
+                                    <constraint id="784" firstItem="772" firstAttribute="trailing" secondItem="780" secondAttribute="trailing" constant="10"/>
+                                    <constraint id="789" firstItem="780" firstAttribute="leading" secondItem="776" secondAttribute="trailing" constant="10"/>
+                                    <constraint id="790" firstItem="772" firstAttribute="height" constant="46"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" id="791" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="154" width="600" height="46"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="1" blue="0" alpha="1"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Age" lineBreakMode="tailTruncation" minimumFontSize="10" id="792" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="7" y="12" width="120" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <constraints>
+                                            <constraint id="793" firstItem="792" firstAttribute="height" constant="21"/>
+                                            <constraint id="885" firstItem="792" firstAttribute="width" constant="120"/>
+                                        </constraints>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="795" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="137" y="8" width="453" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="796" firstItem="792" firstAttribute="top" secondItem="791" secondAttribute="top" constant="12"/>
+                                    <constraint id="797" firstItem="791" firstAttribute="bottom" secondItem="792" secondAttribute="bottom" constant="13"/>
+                                    <constraint id="798" firstItem="792" firstAttribute="leading" secondItem="791" secondAttribute="leading" constant="7"/>
+                                    <constraint id="799" firstItem="795" firstAttribute="top" secondItem="791" secondAttribute="top" constant="8"/>
+                                    <constraint id="800" firstItem="791" firstAttribute="bottom" secondItem="795" secondAttribute="bottom" constant="8"/>
+                                    <constraint id="801" firstItem="791" firstAttribute="trailing" secondItem="795" secondAttribute="trailing" constant="10"/>
+                                    <constraint id="802" firstItem="795" firstAttribute="leading" secondItem="792" secondAttribute="trailing" constant="10"/>
+                                    <constraint id="803" firstItem="791" firstAttribute="height" constant="46"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" id="824" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="200" width="600" height="46"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="1" blue="0" alpha="1"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Pet" lineBreakMode="tailTruncation" minimumFontSize="10" id="825" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                        <rect key="frame" x="10" y="12" width="90" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <constraints>
+                                            <constraint id="826" firstItem="825" firstAttribute="height" constant="21"/>
+                                            <constraint id="827" firstItem="825" firstAttribute="width" constant="95"/>
+                                        </constraints>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="863" tag="0">
+                                        <rect key="frame" x="113" y="8" width="53" height="31"/>
+                                        <constraints>
+                                            <constraint id="873" firstItem="863" firstAttribute="height" constant="31"/>
+                                            <constraint id="874" firstItem="863" firstAttribute="width" constant="51"/>
+                                        </constraints>
+                                    </switch>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Cat" lineBreakMode="tailTruncation" minimumFontSize="10" id="867" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="172" y="12" width="27" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <constraints>
+                                            <constraint id="871" firstItem="867" firstAttribute="width" constant="27"/>
+                                            <constraint id="872" firstItem="867" firstAttribute="height" constant="21"/>
+                                        </constraints>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="875">
+                                        <rect key="frame" x="209" y="8" width="51" height="30"/>
+                                    </switch>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dog" lineBreakMode="tailTruncation" minimumFontSize="10" id="879" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="268" y="12" width="32" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="829" firstItem="825" firstAttribute="top" secondItem="824" secondAttribute="top" constant="12"/>
+                                    <constraint id="830" firstItem="824" firstAttribute="bottom" secondItem="825" secondAttribute="bottom" constant="13"/>
+                                    <constraint id="831" firstItem="825" firstAttribute="leading" secondItem="824" secondAttribute="leading" constant="10"/>
+                                    <constraint id="836" firstItem="824" firstAttribute="height" constant="46"/>
+                                    <constraint id="864" firstItem="863" firstAttribute="leading" secondItem="825" secondAttribute="trailing" constant="8"/>
+                                    <constraint id="865" firstItem="863" firstAttribute="top" secondItem="824" secondAttribute="top" constant="8"/>
+                                    <constraint id="866" firstItem="824" firstAttribute="bottom" secondItem="863" secondAttribute="bottom" constant="7"/>
+                                    <constraint id="868" firstItem="867" firstAttribute="leading" secondItem="863" secondAttribute="trailing" constant="8"/>
+                                    <constraint id="869" firstItem="867" firstAttribute="top" secondItem="824" secondAttribute="top" constant="12"/>
+                                    <constraint id="870" firstItem="824" firstAttribute="bottom" secondItem="867" secondAttribute="bottom" constant="13"/>
+                                    <constraint id="880" firstItem="879" firstAttribute="top" secondItem="824" secondAttribute="top" constant="12"/>
+                                    <constraint id="882" firstItem="824" firstAttribute="bottom" secondItem="879" secondAttribute="bottom" constant="13"/>
+                                    <constraint id="922" firstItem="875" firstAttribute="leading" secondItem="867" secondAttribute="trailing" constant="10"/>
+                                    <constraint id="923" firstItem="875" firstAttribute="top" secondItem="824" secondAttribute="top" constant="8"/>
+                                    <constraint id="924" firstItem="824" firstAttribute="bottom" secondItem="875" secondAttribute="bottom" constant="8"/>
+                                    <constraint id="925" firstItem="879" firstAttribute="top" secondItem="824" secondAttribute="top" constant="12"/>
+                                    <constraint id="926" firstItem="824" firstAttribute="bottom" secondItem="879" secondAttribute="bottom" constant="13"/>
+                                    <constraint id="927" firstItem="879" firstAttribute="leading" secondItem="875" secondAttribute="trailing" constant="10"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" id="886" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="246" width="600" height="46"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="1" blue="0" alpha="1"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Life partner" lineBreakMode="tailTruncation" minimumFontSize="10" id="887" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="10" y="12" width="95" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <constraints>
+                                            <constraint id="888" firstItem="887" firstAttribute="height" constant="21"/>
+                                            <constraint id="916" firstItem="887" firstAttribute="width" constant="95"/>
+                                        </constraints>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="890">
+                                        <rect key="frame" x="113" y="8" width="53" height="31"/>
+                                        <constraints>
+                                            <constraint id="891" firstItem="890" firstAttribute="height" constant="31"/>
+                                            <constraint id="892" firstItem="890" firstAttribute="width" constant="51"/>
+                                        </constraints>
+                                    </switch>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Girl" lineBreakMode="tailTruncation" minimumFontSize="10" id="893" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="172" y="12" width="27" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <constraints>
+                                            <constraint id="894" firstItem="893" firstAttribute="width" constant="27"/>
+                                            <constraint id="895" firstItem="893" firstAttribute="height" constant="21"/>
+                                        </constraints>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="896">
+                                        <rect key="frame" x="209" y="8" width="51" height="30"/>
+                                    </switch>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Boy" lineBreakMode="tailTruncation" minimumFontSize="10" id="897" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                        <rect key="frame" x="268" y="12" width="32" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="898" firstItem="887" firstAttribute="top" secondItem="886" secondAttribute="top" constant="12"/>
+                                    <constraint id="899" firstItem="886" firstAttribute="bottom" secondItem="887" secondAttribute="bottom" constant="13"/>
+                                    <constraint id="900" firstItem="887" firstAttribute="leading" secondItem="886" secondAttribute="leading" constant="10"/>
+                                    <constraint id="901" firstItem="886" firstAttribute="height" constant="46"/>
+                                    <constraint id="902" firstItem="890" firstAttribute="leading" secondItem="887" secondAttribute="trailing" constant="8"/>
+                                    <constraint id="903" firstItem="890" firstAttribute="top" secondItem="886" secondAttribute="top" constant="8"/>
+                                    <constraint id="904" firstItem="886" firstAttribute="bottom" secondItem="890" secondAttribute="bottom" constant="7"/>
+                                    <constraint id="905" firstItem="893" firstAttribute="leading" secondItem="890" secondAttribute="trailing" constant="8"/>
+                                    <constraint id="906" firstItem="893" firstAttribute="top" secondItem="886" secondAttribute="top" constant="12"/>
+                                    <constraint id="907" firstItem="886" firstAttribute="bottom" secondItem="893" secondAttribute="bottom" constant="13"/>
+                                    <constraint id="908" firstItem="896" firstAttribute="top" secondItem="886" secondAttribute="top" constant="8"/>
+                                    <constraint id="909" firstItem="886" firstAttribute="bottom" secondItem="896" secondAttribute="bottom" constant="8"/>
+                                    <constraint id="910" firstItem="896" firstAttribute="leading" secondItem="893" secondAttribute="trailing" constant="10"/>
+                                    <constraint id="911" firstItem="897" firstAttribute="top" secondItem="886" secondAttribute="top" constant="12"/>
+                                    <constraint id="912" firstItem="886" firstAttribute="bottom" secondItem="897" secondAttribute="bottom" constant="13"/>
+                                    <constraint id="917" firstItem="897" firstAttribute="leading" secondItem="896" secondAttribute="trailing" constant="10"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" id="928" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="292" width="600" height="46"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="1" blue="0" alpha="1"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Amount of kids" lineBreakMode="tailTruncation" minimumFontSize="10" id="929" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="7" y="12" width="120" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <constraints>
+                                            <constraint id="930" firstItem="929" firstAttribute="height" constant="21"/>
+                                            <constraint id="931" firstItem="929" firstAttribute="width" constant="120"/>
+                                        </constraints>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="932" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="137" y="8" width="453" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="933" firstItem="929" firstAttribute="top" secondItem="928" secondAttribute="top" constant="12"/>
+                                    <constraint id="934" firstItem="928" firstAttribute="bottom" secondItem="929" secondAttribute="bottom" constant="13"/>
+                                    <constraint id="935" firstItem="929" firstAttribute="leading" secondItem="928" secondAttribute="leading" constant="7"/>
+                                    <constraint id="936" firstItem="932" firstAttribute="top" secondItem="928" secondAttribute="top" constant="8"/>
+                                    <constraint id="937" firstItem="928" firstAttribute="bottom" secondItem="932" secondAttribute="bottom" constant="8"/>
+                                    <constraint id="938" firstItem="928" firstAttribute="trailing" secondItem="932" secondAttribute="trailing" constant="10"/>
+                                    <constraint id="939" firstItem="932" firstAttribute="leading" secondItem="929" secondAttribute="trailing" constant="10"/>
+                                    <constraint id="940" firstItem="928" firstAttribute="height" constant="46"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" id="944" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="338" width="600" height="95"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="1" blue="0" alpha="1"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Life priority" lineBreakMode="tailTruncation" minimumFontSize="10" id="945" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
+                                        <rect key="frame" x="7" y="12" width="583" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <constraints>
+                                            <constraint id="946" firstItem="945" firstAttribute="height" constant="21"/>
+                                        </constraints>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="966">
+                                        <rect key="frame" x="20" y="46" width="560" height="29"/>
+                                        <segments>
+                                            <segment title="Career"/>
+                                            <segment title="Family"/>
+                                            <segment title="Yourself"/>
+                                        </segments>
+                                        <color key="tintColor" colorSpace="calibratedRGB" red="0.00392156862745098" green="0.23529411764705882" blue="0.00392156862745098" alpha="1"/>
+                                    </segmentedControl>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="949" firstItem="945" firstAttribute="top" secondItem="944" secondAttribute="top" constant="12"/>
+                                    <constraint id="951" firstItem="945" firstAttribute="leading" secondItem="944" secondAttribute="leading" constant="7"/>
+                                    <constraint id="960" firstItem="944" firstAttribute="height" constant="95"/>
+                                    <constraint id="961" firstItem="944" firstAttribute="bottom" secondItem="945" secondAttribute="bottom" constant="62"/>
+                                    <constraint id="963" firstItem="944" firstAttribute="trailing" secondItem="945" secondAttribute="trailing" constant="10"/>
+                                    <constraint id="969" firstItem="944" firstAttribute="trailing" secondItem="966" secondAttribute="trailing" constant="20"/>
+                                    <constraint id="970" firstItem="966" firstAttribute="leading" secondItem="944" secondAttribute="leading" constant="20"/>
+                                    <constraint id="971" firstItem="966" firstAttribute="top" secondItem="945" secondAttribute="bottom" constant="13"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" id="998" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="0.0" y="433" width="600" height="71"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="1" blue="0" alpha="1"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Result" lineBreakMode="tailTruncation" minimumFontSize="10" id="999" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
+                                        <rect key="frame" x="7" y="12" width="583" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <constraints>
+                                            <constraint id="1000" firstItem="999" firstAttribute="height" constant="21"/>
+                                        </constraints>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="1026" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
+                                        <rect key="frame" x="8" y="37" width="583" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <constraints>
+                                            <constraint id="1027" firstItem="1026" firstAttribute="height" constant="21"/>
+                                        </constraints>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="1005" firstItem="999" firstAttribute="top" secondItem="998" secondAttribute="top" constant="12"/>
+                                    <constraint id="1006" firstItem="999" firstAttribute="leading" secondItem="998" secondAttribute="leading" constant="7"/>
+                                    <constraint id="1009" firstItem="998" firstAttribute="trailing" secondItem="999" secondAttribute="trailing" constant="10"/>
+                                    <constraint id="1028" firstItem="1026" firstAttribute="leading" secondItem="998" secondAttribute="leading" constant="8"/>
+                                    <constraint id="1029" firstItem="998" firstAttribute="trailing" secondItem="1026" secondAttribute="trailing" constant="9"/>
+                                    <constraint id="1030" firstItem="1026" firstAttribute="top" secondItem="999" secondAttribute="bottom" constant="4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint id="767" firstItem="764" firstAttribute="leading" secondItem="568" secondAttribute="leading" constant="10"/>
+                            <constraint id="771" firstItem="764" firstAttribute="top" secondItem="568" secondAttribute="top" constant="70"/>
+                            <constraint id="773" firstItem="772" firstAttribute="top" secondItem="764" secondAttribute="bottom" constant="8"/>
+                            <constraint id="774" firstItem="772" firstAttribute="leading" secondItem="568" secondAttribute="leading"/>
+                            <constraint id="775" firstItem="772" firstAttribute="trailing" secondItem="568" secondAttribute="trailing"/>
+                            <constraint id="804" firstItem="791" firstAttribute="top" secondItem="772" secondAttribute="bottom"/>
+                            <constraint id="805" firstItem="791" firstAttribute="trailing" secondItem="568" secondAttribute="trailing"/>
+                            <constraint id="806" firstItem="791" firstAttribute="leading" secondItem="568" secondAttribute="leading"/>
+                            <constraint id="837" firstItem="824" firstAttribute="top" secondItem="791" secondAttribute="bottom"/>
+                            <constraint id="838" firstItem="824" firstAttribute="trailing" secondItem="568" secondAttribute="trailing"/>
+                            <constraint id="839" firstItem="824" firstAttribute="leading" secondItem="568" secondAttribute="leading"/>
+                            <constraint id="913" firstItem="886" firstAttribute="top" secondItem="824" secondAttribute="bottom"/>
+                            <constraint id="914" firstItem="886" firstAttribute="leading" secondItem="568" secondAttribute="leading"/>
+                            <constraint id="915" firstItem="886" firstAttribute="trailing" secondItem="568" secondAttribute="trailing"/>
+                            <constraint id="941" firstItem="928" firstAttribute="leading" secondItem="568" secondAttribute="leading"/>
+                            <constraint id="942" firstItem="928" firstAttribute="trailing" secondItem="568" secondAttribute="trailing"/>
+                            <constraint id="943" firstItem="928" firstAttribute="top" secondItem="886" secondAttribute="bottom"/>
+                            <constraint id="957" firstItem="944" firstAttribute="leading" secondItem="568" secondAttribute="leading"/>
+                            <constraint id="958" firstItem="944" firstAttribute="trailing" secondItem="568" secondAttribute="trailing"/>
+                            <constraint id="959" firstItem="944" firstAttribute="top" secondItem="928" secondAttribute="bottom"/>
+                            <constraint id="1013" firstItem="998" firstAttribute="leading" secondItem="568" secondAttribute="leading"/>
+                            <constraint id="1014" firstItem="998" firstAttribute="top" secondItem="944" secondAttribute="bottom"/>
+                            <constraint id="1015" firstItem="998" firstAttribute="trailing" secondItem="568" secondAttribute="trailing"/>
+                            <constraint id="1033" firstItem="998" firstAttribute="leading" secondItem="568" secondAttribute="leading"/>
+                            <constraint id="1034" firstItem="998" firstAttribute="top" secondItem="944" secondAttribute="bottom"/>
+                            <constraint id="1035" firstItem="998" firstAttribute="trailing" secondItem="568" secondAttribute="trailing"/>
+                        </constraints>
+                    </view>
+                    <navigationItem title="Title" id="760" key="navigationItem">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="986">
+                            <view contentMode="scaleToFill" id="985" translatesAutoresizingMaskIntoConstraints="NO" key="customView">
+                                <rect key="frame" x="0.0" y="0.0" width="101" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="987" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                        <rect key="frame" x="60" y="5" width="30" height="30"/>
+                                        <state key="normal" title="Button" image="ic_directions_boat_white_24dp.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="988" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                        <rect key="frame" x="7" y="5" width="30" height="30"/>
+                                        <state key="normal" title="Button" image="ic_do_not_disturb_on_white_24dp.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </view>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ResultLabel" destination="1026" id="name-outlet-1026"/>
+                        <outlet property="Resl" destination="999" id="name-outlet-999"/>
+                        <outlet property="Segments" destination="966" id="name-outlet-966"/>
+                        <outlet property="NameText" destination="780" id="name-outlet-780"/>
+                        <outlet property="AgeText" destination="795" id="name-outlet-795"/>
+                        <outlet property="KidsText" destination="932" id="name-outlet-932"/>
+                        <outlet property="CatSwitch" destination="863" id="name-outlet-863"/>
+                        <outlet property="DogSwitch" destination="875" id="name-outlet-875"/>
+                        <outlet property="GirlSwitch" destination="890" id="name-outlet-890"/>
+                        <outlet property="BoySwitch" destination="896" id="name-outlet-896"/>
+                        <outlet property="ClearButton" destination="988" id="name-outlet-988"/>
+                        <outlet property="RunButton" destination="987" id="name-outlet-987"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="569" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-168" y="-83"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedScreenMetrics key="destination"/>
-    </simulatedMetricsContainer>
     <resources>
         <image name="ic_directions_boat_white_24dp.png" width="96" height="96"/>
         <image name="ic_do_not_disturb_on_white_24dp.png" width="96" height="96"/>
+        <image name="ic_android_white_24dp.png" width="96" height="96"/>
     </resources>
 </document>
