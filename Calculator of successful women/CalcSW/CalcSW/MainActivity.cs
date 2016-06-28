@@ -47,24 +47,6 @@ namespace CalcSW
             Clear();
         }
 
-        void Clear()
-        {
-            kidsText.SetBackgroundColor(Color.LightGray);
-            ageText.SetBackgroundColor(Color.LightGray);
-            nameText.SetBackgroundColor(Color.LightGray);
-
-            kidsText.Text = string.Empty;
-            ageText.Text = string.Empty;
-            nameText.Text = string.Empty;
-
-            dogCheckBox.Checked = false;
-            catCheckBox.Checked = false;
-            girlCheckBox.Checked = false;
-            boyCheckBox.Checked = false;
-
-            FragmentManager.BeginTransaction().Replace(Resource.Id.fragment_container, defultFragment).Commit();
-        }
-
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             MenuInflater.Inflate(Resource.Menu.main, menu);
@@ -84,6 +66,24 @@ namespace CalcSW
                 default:
                     return base.OnOptionsItemSelected(item);
             }
+        }
+
+        void Clear()
+        {
+            kidsText.SetBackgroundColor(Color.LightGray);
+            ageText.SetBackgroundColor(Color.LightGray);
+            nameText.SetBackgroundColor(Color.LightGray);
+
+            kidsText.Text = string.Empty;
+            ageText.Text = string.Empty;
+            nameText.Text = string.Empty;
+
+            dogCheckBox.Checked = false;
+            catCheckBox.Checked = false;
+            girlCheckBox.Checked = false;
+            boyCheckBox.Checked = false;
+
+            FragmentManager.BeginTransaction().Replace(Resource.Id.fragment_container, defultFragment).Commit();
         }
 
         private void InitControls()

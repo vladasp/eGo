@@ -16,9 +16,9 @@ namespace CalcSWi
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            Clear(new object(), new EventArgs());
+            Clear();
             RunButton.TouchUpInside += Calculation;
-            ClearButton.TouchUpInside += Clear;
+            ClearButton.TouchUpInside += ClearButton_TouchUpInside; ;
         }
 
         public override void DidReceiveMemoryWarning()
@@ -28,7 +28,12 @@ namespace CalcSWi
         }
 
         #region Event Hendlers
-        void Clear(object sender, EventArgs e)
+        private void ClearButton_TouchUpInside(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
+        void Clear()
         {
             KidsText.BackgroundColor = UIColor.White;
             AgeText.BackgroundColor = UIColor.White;
