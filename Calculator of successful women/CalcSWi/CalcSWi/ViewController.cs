@@ -16,9 +16,32 @@ namespace CalcSWi
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+
+            NameText.ShouldReturn = (textField) => {
+                textField.ResignFirstResponder();
+                return true;
+            };
+
+            AgeText.ShouldReturn = (textField) => {
+                textField.ResignFirstResponder();
+                return true;
+            };
+
+            KidsText.ShouldReturn = (textField) => {
+                textField.ResignFirstResponder();
+                return true;
+            };
+
+
+            var g = new UITapGestureRecognizer(() => View.EndEditing(true));
+            g.CancelsTouchesInView = false; //for iOS5
+            View.AddGestureRecognizer(g);
+
+
             Clear();
             RunButton.TouchUpInside += Calculation;
-            ClearButton.TouchUpInside += ClearButton_TouchUpInside; ;
+            ClearButton.TouchUpInside += ClearButton_TouchUpInside;
+            
         }
 
         public override void DidReceiveMemoryWarning()
