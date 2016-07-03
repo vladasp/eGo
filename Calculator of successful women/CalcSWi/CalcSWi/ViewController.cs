@@ -1,6 +1,6 @@
 ﻿using CoreGraphics;
 using System;
-
+using System.Collections.Generic;
 using UIKit;
 
 namespace CalcSWi
@@ -9,6 +9,8 @@ namespace CalcSWi
     {
         int kids = 0;
         int age = 0;
+        List<string> results;
+
         public ViewController(IntPtr handle) : base(handle)
         {
         }
@@ -16,6 +18,8 @@ namespace CalcSWi
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+
+            results = new List<string>();
 
             NameText.ShouldReturn = (textField) => {
                 textField.ResignFirstResponder();
@@ -41,7 +45,6 @@ namespace CalcSWi
             Clear();
             RunButton.TouchUpInside += Calculation;
             ClearButton.TouchUpInside += ClearButton_TouchUpInside;
-            
         }
 
         public override void DidReceiveMemoryWarning()
@@ -83,6 +86,12 @@ namespace CalcSWi
             int input = GetInputValue();
 
             GetResult(input);
+
+            TableView.Source = new TableSource(results);
+
+            TableView.RegisterClassForCellReuse (typeof(UITableViewCell), TableSource.CellIdentifier);
+
+
         }
         #endregion
 
@@ -110,6 +119,7 @@ namespace CalcSWi
                     ResultLabel.Text = NameText.Text + "! " + Results.Ansver5;
                     break;
             }
+            results.Add(ResultLabel.Text);
         }
 
         private bool CanCalcKids()

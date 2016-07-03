@@ -88,10 +88,16 @@
     <Compile Include="AppDelegate.cs" />
     <None Include="GettingStarted.Xamarin" />
     <None Include="Info.plist" />
+    <Compile Include="MyViewCell.cs" />
+    <Compile Include="MyViewCell.designer.cs">
+      <DependentUpon>MyViewCell.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <InterfaceDefinition Include="MyViewCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Results.cs" />
+    <Compile Include="Source\TableSource.cs" />
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>

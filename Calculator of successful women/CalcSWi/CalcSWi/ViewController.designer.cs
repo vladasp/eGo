@@ -62,6 +62,10 @@ namespace CalcSWi
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UISegmentedControl Segments { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITableView TableView { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (AgeText != null) {
@@ -122,6 +126,11 @@ namespace CalcSWi
             if (Segments != null) {
                 Segments.Dispose ();
                 Segments = null;
+            }
+
+            if (TableView != null) {
+                TableView.Dispose ();
+                TableView = null;
             }
         }
     }
