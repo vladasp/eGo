@@ -142,6 +142,16 @@
         <LinearLayout
             android:orientation="vertical"
             android:minWidth="25px"
-            android:minHeight="25px" />
+            android:minHeight="25px">
+            <ListView
+                android:id="@+id/myList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="154.0dp"
+                android:text="No results in list"
+                android:id="@+id/empty" />
+        </LinearLayout>
     </TableLayout>
 </ScrollView>

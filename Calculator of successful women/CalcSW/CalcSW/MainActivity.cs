@@ -6,6 +6,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Android.Graphics;
+using System.Collections.Generic;
 
 namespace CalcSW
 {
@@ -29,6 +30,9 @@ namespace CalcSW
         string result;
         FragmentResult resultFragment;
         FragmentDefault defultFragment;
+        List<string> results;
+        ListView list;
+        ArrayAdapter adapter;
         #endregion
 
         protected override void OnCreate(Bundle bundle)
@@ -101,6 +105,8 @@ namespace CalcSW
             yourselfRadioButton = FindViewById<RadioButton>(Resource.Id.radioButtonYourself);
             resultFragment = new FragmentResult();
             defultFragment = new FragmentDefault();
+            results = new List<string>();
+            list = FindViewById<ListView>(Resource.Id.myList);
         }
 
         private void CalcButton_Click()
@@ -116,6 +122,13 @@ namespace CalcSW
             FragmentManager.BeginTransaction().Replace(Resource.Id.fragment_container, resultFragment).Commit();
 
             resultFragment.UpdateAnswer(result);
+
+            adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, results);
+
+            list.Adapter = adapter;
+
+            list.EmptyView = FindViewById<TextView>(Resource.Id.empty);
+
         }
 
         private int GetInputValue()
@@ -186,6 +199,12 @@ namespace CalcSW
                     result = nameText.Text + "\n" + GetString(Resource.String.Ansver5);
                     break;
             }
+            //if (results.Count != 0)
+            //{
+            //    adapter.Add(result);
+            //    adapter.NotifyDataSetChanged();
+            //}
+            results.Add(result);
         }
 
         private bool CanCalcKids()

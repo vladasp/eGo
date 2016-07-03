@@ -131,14 +131,20 @@ namespace CalcSW
 			// aapt resource value: 0x7f090002
 			public const int editTextName = 2131296258;
 			
+			// aapt resource value: 0x7f09000e
+			public const int empty = 2131296270;
+			
 			// aapt resource value: 0x7f09000c
 			public const int fragment_container = 2131296268;
 			
-			// aapt resource value: 0x7f09000e
-			public const int menuClear = 2131296270;
+			// aapt resource value: 0x7f090010
+			public const int menuClear = 2131296272;
+			
+			// aapt resource value: 0x7f09000f
+			public const int menuItem = 2131296271;
 			
 			// aapt resource value: 0x7f09000d
-			public const int menuItem = 2131296269;
+			public const int myList = 2131296269;
 			
 			// aapt resource value: 0x7f090009
 			public const int radioButtonCareer = 2131296265;
