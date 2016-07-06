@@ -28,10 +28,6 @@ namespace CalcSWi
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton ClearButton { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UISwitch DogSwitch { get; set; }
 
         [Outlet]
@@ -81,11 +77,6 @@ namespace CalcSWi
             if (CatSwitch != null) {
                 CatSwitch.Dispose ();
                 CatSwitch = null;
-            }
-
-            if (ClearButton != null) {
-                ClearButton.Dispose ();
-                ClearButton = null;
             }
 
             if (DogSwitch != null) {

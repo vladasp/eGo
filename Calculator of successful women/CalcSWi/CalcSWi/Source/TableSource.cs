@@ -7,7 +7,7 @@ namespace CalcSWi
 {
     class TableSource : UITableViewSource
     {
-        IList<string> _objects;
+        public IList<string> _objects;
         public const string CellIdentifier = "MyCell";
 
         public TableSource(IList<string> objects)

@@ -336,7 +336,7 @@
                                 <rect key="frame" x="0.0" y="504" width="600" height="96"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="1044" rowHeight="44">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="1044" rowHeight="44" customClass="MyViewCell">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1044" id="1045">
@@ -354,6 +354,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="MyMessage" destination="1061" id="name-outlet-1061"/>
+                                            <outlet property="MyMessage" destination="1045" id="name-outlet-1045"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -392,24 +393,23 @@
                             <constraint id="1062" firstItem="1043" firstAttribute="top" secondItem="998" secondAttribute="top" constant="71"/>
                         </constraints>
                     </view>
-                    <navigationItem title="Title" id="760" key="navigationItem">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="986">
-                            <view contentMode="scaleToFill" id="985" translatesAutoresizingMaskIntoConstraints="NO" key="customView">
-                                <rect key="frame" x="0.0" y="0.0" width="101" height="40"/>
+                    <navigationItem title="CSW" id="760" key="navigationItem">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="1071">
+                            <view contentMode="scaleToFill" id="1070" translatesAutoresizingMaskIntoConstraints="NO" key="customView">
+                                <rect key="frame" x="0.0" y="0.0" width="97" height="35"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="987" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                        <rect key="frame" x="60" y="5" width="30" height="30"/>
-                                        <state key="normal" title="Button" image="ic_directions_boat_white_24dp.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="988" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                        <rect key="frame" x="7" y="5" width="30" height="30"/>
-                                        <state key="normal" title="Button" image="ic_do_not_disturb_on_white_24dp.png">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1072" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="11" y="5" width="35" height="35"/>
+                                        <state key="normal" image="ic_directions_boat_white_24dp.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint id="1082" firstItem="1072" firstAttribute="top" secondItem="1070" secondAttribute="top" constant="5"/>
+                                    <constraint id="1083" firstItem="1072" firstAttribute="leading" secondItem="1070" secondAttribute="leading" constant="11"/>
+                                    <constraint id="1084" firstItem="1070" firstAttribute="bottom" secondItem="1072" secondAttribute="bottom" constant="5"/>
+                                </constraints>
                             </view>
                         </barButtonItem>
                     </navigationItem>
@@ -424,14 +424,13 @@
                         <outlet property="DogSwitch" destination="875" id="name-outlet-875"/>
                         <outlet property="GirlSwitch" destination="890" id="name-outlet-890"/>
                         <outlet property="BoySwitch" destination="896" id="name-outlet-896"/>
-                        <outlet property="ClearButton" destination="988" id="name-outlet-988"/>
-                        <outlet property="RunButton" destination="987" id="name-outlet-987"/>
                         <outlet property="TableView" destination="1043" id="name-outlet-1043"/>
+                        <outlet property="RunButton" destination="1072" id="name-outlet-1072"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="569" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-130" y="-131"/>
+            <point key="canvasLocation" x="-230" y="-87"/>
         </scene>
     </scenes>
     <resources>

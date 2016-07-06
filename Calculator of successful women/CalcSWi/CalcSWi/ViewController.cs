@@ -10,6 +10,7 @@ namespace CalcSWi
         int kids = 0;
         int age = 0;
         List<string> results;
+        TableSource ts;
 
         public ViewController(IntPtr handle) : base(handle)
         {
@@ -20,6 +21,8 @@ namespace CalcSWi
             base.ViewDidLoad();
 
             results = new List<string>();
+
+            ts = new TableSource(results);
 
             NameText.ShouldReturn = (textField) => {
                 textField.ResignFirstResponder();
@@ -41,6 +44,8 @@ namespace CalcSWi
             g.CancelsTouchesInView = false; //for iOS5
             View.AddGestureRecognizer(g);
 
+            TableView.RegisterClassForCellReuse(typeof(UITableViewCell), TableSource.CellIdentifier);
+            TableView.Source = ts;
 
             Clear();
             RunButton.TouchUpInside += Calculation;
@@ -87,11 +92,7 @@ namespace CalcSWi
 
             GetResult(input);
 
-            TableView.Source = new TableSource(results);
-
-            TableView.RegisterClassForCellReuse (typeof(UITableViewCell), TableSource.CellIdentifier);
-
-
+            //TableView.ReloadData();
         }
         #endregion
 
@@ -119,7 +120,7 @@ namespace CalcSWi
                     ResultLabel.Text = NameText.Text + "! " + Results.Ansver5;
                     break;
             }
-            results.Add(ResultLabel.Text);
+            ts._objects.Add(ResultLabel.Text);
         }
 
         private bool CanCalcKids()

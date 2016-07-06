@@ -1,4 +1,4 @@
-﻿// WARNING
+// WARNING
 //
 // This file has been generated automatically by Xamarin Studio from the outlets and
 // actions declared in your storyboard file.
@@ -14,8 +14,16 @@ namespace CalcSWi
     [Register ("MyViewCell")]
     partial class MyViewCell
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel MyMessage { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (MyMessage != null) {
+                MyMessage.Dispose ();
+                MyMessage = null;
+            }
         }
     }
 }
