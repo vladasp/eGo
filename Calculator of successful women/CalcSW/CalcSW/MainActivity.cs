@@ -49,6 +49,13 @@ namespace CalcSW
             InitControls();
 
             Clear();
+
+            adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, results);
+
+            list.Adapter = adapter;
+
+            list.EmptyView = FindViewById<TextView>(Resource.Id.empty);
+
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -123,12 +130,6 @@ namespace CalcSW
 
             resultFragment.UpdateAnswer(result);
 
-            adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, results);
-
-            list.Adapter = adapter;
-
-            list.EmptyView = FindViewById<TextView>(Resource.Id.empty);
-
         }
 
         private int GetInputValue()
@@ -199,12 +200,16 @@ namespace CalcSW
                     result = nameText.Text + "\n" + GetString(Resource.String.Ansver5);
                     break;
             }
-            //if (results.Count != 0)
-            //{
-            //    adapter.Add(result);
-            //    adapter.NotifyDataSetChanged();
-            //}
             results.Add(result);
+
+            if (results.Count != 0)
+            {
+                foreach(var result in results)
+                {
+                    adapter.Add(result);
+                }
+                adapter.NotifyDataSetChanged();
+            }
         }
 
         private bool CanCalcKids()

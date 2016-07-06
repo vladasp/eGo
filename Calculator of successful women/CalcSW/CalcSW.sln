@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcSW", "CalcSW\CalcSW.csproj", "{1C4805B4-C36B-4563-95B8-6E4896684280}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcSWi", "..\CalcSWi\CalcSWi\CalcSWi.csproj", "{37BCC2CE-4C94-4813-AE5E-B6B71ABD71FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcSWi", "CalcSWi\CalcSWi.csproj", "{37BCC2CE-4C94-4813-AE5E-B6B71ABD71FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
