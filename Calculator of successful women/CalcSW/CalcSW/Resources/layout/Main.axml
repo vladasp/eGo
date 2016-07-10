@@ -132,26 +132,5 @@
                 android:text="@string/Yourself"
                 android:id="@+id/radioButtonYourself" />
         </RadioGroup>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/fragment_container" />
-        <LinearLayout
-            android:orientation="vertical"
-            android:minWidth="25px"
-            android:minHeight="25px">
-            <ListView
-                android:id="@+id/myList"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="154.0dp"
-                android:text="No results in list"
-                android:id="@+id/empty" />
-        </LinearLayout>
     </TableLayout>
 </ScrollView>

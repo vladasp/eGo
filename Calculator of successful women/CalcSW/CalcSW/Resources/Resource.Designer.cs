@@ -110,56 +110,62 @@ namespace CalcSW
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f09000a
+			public const int checkBoxBoy = 2131296266;
+			
 			// aapt resource value: 0x7f090007
-			public const int checkBoxBoy = 2131296263;
-			
-			// aapt resource value: 0x7f090004
-			public const int checkBoxCat = 2131296260;
-			
-			// aapt resource value: 0x7f090005
-			public const int checkBoxDog = 2131296261;
-			
-			// aapt resource value: 0x7f090006
-			public const int checkBoxGirl = 2131296262;
-			
-			// aapt resource value: 0x7f090003
-			public const int editTextAge = 2131296259;
+			public const int checkBoxCat = 2131296263;
 			
 			// aapt resource value: 0x7f090008
-			public const int editTextKids = 2131296264;
-			
-			// aapt resource value: 0x7f090002
-			public const int editTextName = 2131296258;
-			
-			// aapt resource value: 0x7f09000e
-			public const int empty = 2131296270;
-			
-			// aapt resource value: 0x7f09000c
-			public const int fragment_container = 2131296268;
-			
-			// aapt resource value: 0x7f090010
-			public const int menuClear = 2131296272;
-			
-			// aapt resource value: 0x7f09000f
-			public const int menuItem = 2131296271;
-			
-			// aapt resource value: 0x7f09000d
-			public const int myList = 2131296269;
+			public const int checkBoxDog = 2131296264;
 			
 			// aapt resource value: 0x7f090009
-			public const int radioButtonCareer = 2131296265;
+			public const int checkBoxGirl = 2131296265;
 			
-			// aapt resource value: 0x7f09000a
-			public const int radioButtonFamily = 2131296266;
+			// aapt resource value: 0x7f090006
+			public const int editTextAge = 2131296262;
 			
 			// aapt resource value: 0x7f09000b
-			public const int radioButtonYourself = 2131296267;
+			public const int editTextKids = 2131296267;
+			
+			// aapt resource value: 0x7f090005
+			public const int editTextName = 2131296261;
+			
+			// aapt resource value: 0x7f090010
+			public const int emptyText = 2131296272;
+			
+			// aapt resource value: 0x7f09000f
+			public const int listResult = 2131296271;
+			
+			// aapt resource value: 0x7f090012
+			public const int menuClear = 2131296274;
+			
+			// aapt resource value: 0x7f090011
+			public const int menuItem = 2131296273;
+			
+			// aapt resource value: 0x7f09000c
+			public const int radioButtonCareer = 2131296268;
+			
+			// aapt resource value: 0x7f09000d
+			public const int radioButtonFamily = 2131296269;
+			
+			// aapt resource value: 0x7f09000e
+			public const int radioButtonYourself = 2131296270;
 			
 			// aapt resource value: 0x7f090001
-			public const int textResult = 2131296257;
+			public const int rowAge = 2131296257;
+			
+			// aapt resource value: 0x7f090002
+			public const int rowAnsver = 2131296258;
 			
 			// aapt resource value: 0x7f090000
-			public const int textView1 = 2131296256;
+			public const int rowName = 2131296256;
+			
+			// aapt resource value: 0x7f090004
+			public const int textResult = 2131296260;
+			
+			// aapt resource value: 0x7f090003
+			public const int textView1 = 2131296259;
 			
 			static Id()
 			{
@@ -175,13 +181,19 @@ namespace CalcSW
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int fragment_default = 2130903040;
+			public const int cell_layout = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int fragment_result = 2130903041;
+			public const int fragment_default = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Main = 2130903042;
+			public const int fragment_result = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int Main = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int result_layout = 2130903044;
 			
 			static Layout()
 			{

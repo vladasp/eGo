@@ -28,11 +28,8 @@ namespace CalcSW
         RadioButton familyRadioButton;
         RadioButton yourselfRadioButton;
         string result;
-        FragmentResult resultFragment;
-        FragmentDefault defultFragment;
-        List<string> results;
-        ListView list;
-        ArrayAdapter adapter;
+        //FragmentResult resultFragment;
+        //FragmentDefault defultFragment;
         #endregion
 
         protected override void OnCreate(Bundle bundle)
@@ -50,12 +47,19 @@ namespace CalcSW
 
             Clear();
 
-            adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, results);
-
-            list.Adapter = adapter;
-
-            list.EmptyView = FindViewById<TextView>(Resource.Id.empty);
-
+            if(HistoryData.CurrentResult != null)
+            {
+                nameText.Text = HistoryData.CurrentResult.Name;
+                ageText.Text = HistoryData.CurrentResult.Age;
+                kidsText.Text = HistoryData.CurrentResult.Kids;
+                catCheckBox.Checked = HistoryData.CurrentResult.Cats;
+                dogCheckBox.Checked = HistoryData.CurrentResult.Dogs;
+                boyCheckBox.Checked = HistoryData.CurrentResult.Boys;
+                girlCheckBox.Checked = HistoryData.CurrentResult.Girls;
+                careerRadioButton.Checked = HistoryData.CurrentResult.Career;
+                familyRadioButton.Checked = HistoryData.CurrentResult.Family;
+                yourselfRadioButton.Checked = HistoryData.CurrentResult.Yourself;
+            }
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -70,6 +74,7 @@ namespace CalcSW
             {
                 case Resource.Id.menuItem:
                     CalcButton_Click();
+                    StartActivity(new Intent(this, typeof(ActivityResult)));
                     return true;
                 case Resource.Id.menuClear:
                     Clear();
@@ -94,7 +99,7 @@ namespace CalcSW
             girlCheckBox.Checked = false;
             boyCheckBox.Checked = false;
 
-            FragmentManager.BeginTransaction().Replace(Resource.Id.fragment_container, defultFragment).Commit();
+            //FragmentManager.BeginTransaction().Replace(Resource.Id.fragment_container, defultFragment).Commit();
         }
 
         private void InitControls()
@@ -110,10 +115,8 @@ namespace CalcSW
             careerRadioButton = FindViewById<RadioButton>(Resource.Id.radioButtonCareer);
             familyRadioButton = FindViewById<RadioButton>(Resource.Id.radioButtonFamily);
             yourselfRadioButton = FindViewById<RadioButton>(Resource.Id.radioButtonYourself);
-            resultFragment = new FragmentResult();
-            defultFragment = new FragmentDefault();
-            results = new List<string>();
-            list = FindViewById<ListView>(Resource.Id.myList);
+            //resultFragment = new FragmentResult();
+            //defultFragment = new FragmentDefault();
         }
 
         private void CalcButton_Click()
@@ -126,10 +129,8 @@ namespace CalcSW
 
             GetResult(input);
 
-            FragmentManager.BeginTransaction().Replace(Resource.Id.fragment_container, resultFragment).Commit();
-
-            resultFragment.UpdateAnswer(result);
-
+            //FragmentManager.BeginTransaction().Replace(Resource.Id.fragment_container, resultFragment).Commit();
+            //resultFragment.UpdateAnswer(result);
         }
 
         private int GetInputValue()
@@ -182,34 +183,38 @@ namespace CalcSW
             switch (index)
             {
                 case 1:
-                    result = nameText.Text + "\n" + GetString(Resource.String.Ansver1);
+                    result = GetString(Resource.String.Ansver1);
                     break;
                 case 2:
-                    result = nameText.Text + "\n" + GetString(Resource.String.Ansver2);
+                    result = GetString(Resource.String.Ansver2);
                     break;
                 case 31:
-                    result = nameText.Text + "\n" + GetString(Resource.String.Ansver31);
+                    result = GetString(Resource.String.Ansver31);
                     break;
                 case 32:
-                    result = nameText.Text + "\n" + GetString(Resource.String.Ansver32);
+                    result = GetString(Resource.String.Ansver32);
                     break;
                 case 4:
-                    result = nameText.Text + "\n" + GetString(Resource.String.Ansver4);
+                    result = GetString(Resource.String.Ansver4);
                     break;
                 default:
-                    result = nameText.Text + "\n" + GetString(Resource.String.Ansver5);
+                    result = GetString(Resource.String.Ansver5);
                     break;
             }
-            results.Add(result);
-
-            if (results.Count != 0)
+            HistoryData.Results.Add(new ResultModel
             {
-                foreach(var result in results)
-                {
-                    adapter.Add(result);
-                }
-                adapter.NotifyDataSetChanged();
-            }
+                Name = (string.IsNullOrEmpty(nameText.Text)) ? string.Empty : nameText.Text,
+                Age = (string.IsNullOrEmpty(ageText.Text)) ? string.Empty : ageText.Text,
+                Kids = (string.IsNullOrEmpty(kidsText.Text)) ? string.Empty : kidsText.Text,
+                Ansver = result,
+                Cats = catCheckBox.Checked,
+                Dogs = dogCheckBox.Checked,
+                Boys = boyCheckBox.Checked,
+                Girls = girlCheckBox.Checked,
+                Career = careerRadioButton.Checked,
+                Family = familyRadioButton.Checked,
+                Yourself = yourselfRadioButton.Checked
+            });
         }
 
         private bool CanCalcKids()
