@@ -404,11 +404,24 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1093" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="54" y="2" width="35" height="35"/>
+                                        <state key="normal" image="ic_do_not_disturb_on_white_24dp.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <constraints>
+                                            <constraint id="1097" firstItem="1093" firstAttribute="height" constant="35"/>
+                                            <constraint id="1098" firstItem="1093" firstAttribute="width" constant="35"/>
+                                        </constraints>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint id="1082" firstItem="1072" firstAttribute="top" secondItem="1070" secondAttribute="top" constant="5"/>
-                                    <constraint id="1083" firstItem="1072" firstAttribute="leading" secondItem="1070" secondAttribute="leading" constant="11"/>
-                                    <constraint id="1084" firstItem="1070" firstAttribute="bottom" secondItem="1072" secondAttribute="bottom" constant="5"/>
+                                    <constraint id="1082" firstItem="1072" firstAttribute="top" secondItem="1070" secondAttribute="top"/>
+                                    <constraint id="1083" firstItem="1072" firstAttribute="leading" secondItem="1070" secondAttribute="leading"/>
+                                    <constraint id="1084" firstItem="1070" firstAttribute="bottom" secondItem="1072" secondAttribute="bottom"/>
+                                    <constraint id="1094" firstItem="1093" firstAttribute="leading" secondItem="1072" secondAttribute="trailing" constant="8"/>
+                                    <constraint id="1095" firstItem="1093" firstAttribute="top" secondItem="1070" secondAttribute="top"/>
+                                    <constraint id="1096" firstItem="1093" firstAttribute="bottom" secondItem="1070" secondAttribute="bottom"/>
                                 </constraints>
                             </view>
                         </barButtonItem>
@@ -426,6 +439,7 @@
                         <outlet property="BoySwitch" destination="896" id="name-outlet-896"/>
                         <outlet property="TableView" destination="1043" id="name-outlet-1043"/>
                         <outlet property="RunButton" destination="1072" id="name-outlet-1072"/>
+                        <outlet property="ClearButton" destination="1093" id="name-outlet-1093"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="569" userLabel="First Responder" sceneMemberID="firstResponder"/>

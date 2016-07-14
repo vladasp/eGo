@@ -19,7 +19,6 @@ namespace CalcSW
     {
 
         ListView list;
-        Button buttonAdd;
         ViewHolderAdapter adapter;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -29,9 +28,26 @@ namespace CalcSW
 
             list = FindViewById<ListView>(Resource.Id.listResult);
 
-            buttonAdd = FindViewById<Button>(Resource.Id.buttonAdd);
-
             adapter = new ViewHolderAdapter(HistoryData.Results);
+        }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.menu_result, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Resource.Id.itemCalc:
+                    HistoryData.CurrentResult = null;
+                    StartActivity(new Intent(this, typeof(MainActivity)));
+                    return true;
+                default:
+                    return base.OnOptionsItemSelected(item);
+            }
         }
 
         protected override void OnStart()
@@ -44,21 +60,18 @@ namespace CalcSW
 
             list.EmptyView = FindViewById<TextView>(Resource.Id.emptyText);
 
-            buttonAdd.Click += (sender, e) =>
-            {
-                HistoryData.CurrentResult = null;
-                StartActivity(new Intent(this, typeof(MainActivity)));
-            };
+            list.ItemClick += List_ItemClick;
+        }
 
-            list.ItemClick += (sender, e) =>
-            {
-                HistoryData.SelectedResult(e.Position);
-                StartActivity(new Intent(this, typeof(MainActivity)));
-            };
+        private void List_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            HistoryData.SelectedResult(e.Position);
+            StartActivity(new Intent(this, typeof(MainActivity)));
         }
 
         protected override void OnStop()
         {
+            list.ItemClick -= List_ItemClick;
             base.OnStop();
         }
     }
