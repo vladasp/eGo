@@ -17,19 +17,28 @@ namespace CalcSW
     [Activity(Label = "Results")]
     public class ActivityResult : Activity
     {
+
+        ListView list;
+        Button buttonAdd;
+        ViewHolderAdapter adapter;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.result_layout);
 
+            list = FindViewById<ListView>(Resource.Id.listResult);
+
+            buttonAdd = FindViewById<Button>(Resource.Id.buttonAdd);
+
+            adapter = new ViewHolderAdapter(HistoryData.Results);
+        }
+
+        protected override void OnStart()
+        {
+            base.OnStart();
+
             HistoryData.CurrentResult = null;
-
-            ListView list = FindViewById<ListView>(Resource.Id.listResult);
-
-            Button buttonAdd = FindViewById<Button>(Resource.Id.buttonAdd);
-
-            var adapter = new ViewHolderAdapter(HistoryData.Results);
 
             list.Adapter = adapter;
 
@@ -40,13 +49,17 @@ namespace CalcSW
                 HistoryData.CurrentResult = null;
                 StartActivity(new Intent(this, typeof(MainActivity)));
             };
-            
+
             list.ItemClick += (sender, e) =>
             {
                 HistoryData.SelectedResult(e.Position);
                 StartActivity(new Intent(this, typeof(MainActivity)));
             };
+        }
 
+        protected override void OnStop()
+        {
+            base.OnStop();
         }
     }
 }
