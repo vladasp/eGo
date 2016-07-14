@@ -34,14 +34,9 @@ namespace CalcSW
 
         protected override void OnCreate(Bundle bundle)
         {
-            Console.WriteLine("Created activity");
-
             base.OnCreate(bundle);
 
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
-
-            Console.WriteLine("Created layout");
 
             InitControls();
 

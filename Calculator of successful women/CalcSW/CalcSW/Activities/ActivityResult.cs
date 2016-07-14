@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Java.Lang;
+using CalcSW.Adapters;
 
 namespace CalcSW
 {
@@ -26,7 +27,7 @@ namespace CalcSW
 
             ListView list = FindViewById<ListView>(Resource.Id.listResult);
 
-            var adapter = new ResultAdapter(HistoryData.Results);
+            var adapter = new ViewHolderAdapter(HistoryData.Results);
 
             list.Adapter = adapter;
 
