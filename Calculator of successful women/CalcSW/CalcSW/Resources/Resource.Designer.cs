@@ -110,6 +110,9 @@ namespace CalcSW
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f09000f
+			public const int buttonAdd = 2131296271;
+			
 			// aapt resource value: 0x7f09000a
 			public const int checkBoxBoy = 2131296266;
 			
@@ -131,17 +134,17 @@ namespace CalcSW
 			// aapt resource value: 0x7f090005
 			public const int editTextName = 2131296261;
 			
-			// aapt resource value: 0x7f090010
-			public const int emptyText = 2131296272;
+			// aapt resource value: 0x7f090011
+			public const int emptyText = 2131296273;
 			
-			// aapt resource value: 0x7f09000f
-			public const int listResult = 2131296271;
+			// aapt resource value: 0x7f090010
+			public const int listResult = 2131296272;
+			
+			// aapt resource value: 0x7f090013
+			public const int menuClear = 2131296275;
 			
 			// aapt resource value: 0x7f090012
-			public const int menuClear = 2131296274;
-			
-			// aapt resource value: 0x7f090011
-			public const int menuItem = 2131296273;
+			public const int menuItem = 2131296274;
 			
 			// aapt resource value: 0x7f09000c
 			public const int radioButtonCareer = 2131296268;

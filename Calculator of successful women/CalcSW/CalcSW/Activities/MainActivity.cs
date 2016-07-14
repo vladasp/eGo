@@ -196,7 +196,8 @@ namespace CalcSW
                     result = GetString(Resource.String.Ansver5);
                     break;
             }
-            HistoryData.Results.Add(new ResultModel
+
+            var currentResult = new ResultModel
             {
                 Name = (string.IsNullOrEmpty(nameText.Text)) ? string.Empty : nameText.Text,
                 Age = (string.IsNullOrEmpty(ageText.Text)) ? string.Empty : ageText.Text,
@@ -209,7 +210,17 @@ namespace CalcSW
                 Career = careerRadioButton.Checked,
                 Family = familyRadioButton.Checked,
                 Yourself = yourselfRadioButton.Checked
-            });
+            };
+
+            if (HistoryData.CurrentResult != null && HistoryData.CurrentResult.Position >= 0)
+            {
+                HistoryData.Results[HistoryData.CurrentResult.Position] = currentResult;
+                HistoryData.CurrentResult.Position = -1;
+            }
+            else
+            {
+                HistoryData.Results.Add(currentResult);
+            }
         }
 
         private bool CanCalcKids()

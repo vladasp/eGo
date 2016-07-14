@@ -19,6 +19,7 @@ namespace CalcSW
         public static void SelectedResult(int position)
         {
             CurrentResult = Results[position];
+            CurrentResult.Position = position;
         }
     }
 }

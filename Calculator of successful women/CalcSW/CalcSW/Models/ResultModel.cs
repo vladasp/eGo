@@ -14,6 +14,7 @@ namespace CalcSW
 {
     public class ResultModel
     {
+        public int Position = -1;
         public string Name;
         public string Age;
         public string Kids;
