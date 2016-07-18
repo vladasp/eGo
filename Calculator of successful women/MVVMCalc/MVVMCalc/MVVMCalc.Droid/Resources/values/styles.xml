@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  
+  <style name="EnterFild">
+    <item name="android:layout_margin">5dp</item>
+    <item name="android:textSize">20dp</item>
+  </style>
+
+  <style name="TextSize">
+    <item name="android:textSize">20dp</item>
+  </style>
+  
+    <style name="LeftTextSize">
+    <item name="android:textSize">20dp</item>
+    <item name="android:layout_marginRight">15dp</item>
+  </style>
+
+  <style name="LabelSize">
+    <item name="android:layout_width">160dp</item>
+  </style>
+
+</resources>

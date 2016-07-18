@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<resources>
+  
+    <item name="transparent" type="color">#00000000</item>
+    <item name="dirty_green" type="color">#7FFF00</item>
+    <item name="dirty_blue" type="color">#36648B</item>
+    <item name="dirty_red" type="color">#FF8247</item>
+
+  <integer-array name="androidcolors">
+    <item>@color/transparent</item>
+    <item>@color/dirty_green</item>
+    <item>@color/dirty_blue</item>
+    <item>@color/dirty_red</item>
+  </integer-array>
+</resources>

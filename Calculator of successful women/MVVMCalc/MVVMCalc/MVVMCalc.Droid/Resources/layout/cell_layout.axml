@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dirty_blue">
+    <TextView
+        android:text="Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rowName"
+        local:MvxBind="Text Name"/>
+    <TextView
+        android:text="Age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rowAge" 
+        local:MvxBind="Text Age"/>
+    <TextView
+        style="@style/EnterFild"
+        android:text="Answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rowAnsver"
+        android:background="@color/dirty_blue"
+        android:textColor="@color/dirty_red"
+        local:MvxBind="Text Answer"/>
+</LinearLayout>

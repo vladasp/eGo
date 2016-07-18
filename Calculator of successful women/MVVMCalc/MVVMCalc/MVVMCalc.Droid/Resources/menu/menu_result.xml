@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu
+ xmlns:android="http://schemas.android.com/apk/res/android"
+ xmlns:local="http://schemas.android.com/apk/res-auto">
+  <item
+     android:id="@+id/itemCalc"
+     android:showAsAction="always"
+     android:title="@string/menuItem"
+     android:icon="@drawable/ic_directions_boat_White_24dp"
+     local:MvxBind="Click CalculateCommand">
+  </item>
+</menu>
+
