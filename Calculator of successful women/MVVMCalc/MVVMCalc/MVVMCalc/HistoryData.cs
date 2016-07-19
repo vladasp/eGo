@@ -10,6 +10,7 @@ namespace MVVMCalc
     {
         public static List<ResultModel> Results = new List<ResultModel>();
         public static ResultModel CurrentResult;
+        public static bool IsClear;
         public static void SelectedResult(int position)
         {
             CurrentResult = Results[position];

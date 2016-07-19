@@ -1,3 +1,4 @@
+using Android.Widget;
 using MvvmCross.Core.ViewModels;
 
 namespace MVVMCalc.ViewModels
@@ -113,7 +114,7 @@ namespace MVVMCalc.ViewModels
 
         void SetValues()
         {
-            if (HistoryData.CurrentResult != null)
+            if (!HistoryData.IsClear && HistoryData.CurrentResult != null)
             {
                 Name = HistoryData.CurrentResult.Name;
                 Age = HistoryData.CurrentResult.Age;
@@ -126,12 +127,14 @@ namespace MVVMCalc.ViewModels
                 Family = HistoryData.CurrentResult.Family;
                 Yourself = HistoryData.CurrentResult.Yourself;
             }
+            HistoryData.IsClear = false;
         }
         void Clear()
         {
             //kidsText.SetBackgroundColor(Color.LightGray);
             //ageText.SetBackgroundColor(Color.LightGray);
             //nameText.SetBackgroundColor(Color.LightGray);
+            HistoryData.IsClear = true;
 
             Kids = string.Empty;
             Age = string.Empty;
@@ -210,30 +213,8 @@ namespace MVVMCalc.ViewModels
                     break;
             }
 
-            var currentResult = new ResultModel
-            {
-                Name = (string.IsNullOrEmpty(Name)) ? string.Empty : Name,
-                Age = (string.IsNullOrEmpty(Age)) ? string.Empty : Age,
-                Kids = (string.IsNullOrEmpty(Age)) ? string.Empty : Kids,
-                Ansver = result,
-                Cats = Cats,
-                Dogs = Dogs,
-                Boys = Boys,
-                Girls = Girls,
-                Career = Career,
-                Family = Family,
-                Yourself = Yourself
-            };
-
-            if (HistoryData.CurrentResult != null && HistoryData.CurrentResult.Position >= 0)
-            {
-                HistoryData.Results[HistoryData.CurrentResult.Position] = currentResult;
-                HistoryData.CurrentResult.Position = -1;
-            }
-            else
-            {
-                HistoryData.Results.Add(currentResult);
-            }
+            HistoryData.Results[HistoryData.CurrentResult.Position].Ansver = result;
+            HistoryData.CurrentResult.Position = -1;
         }
 
         #region Data validating
