@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Java.Lang;
+using MVVMCalc.Droid.Views;
 
 namespace MVVMCalc.Droid
 {
@@ -42,7 +43,7 @@ namespace MVVMCalc.Droid
             {
                 case Resource.Id.itemCalc:
                     HistoryData.CurrentResult = null;
-                    StartActivity(new Intent(this, typeof(MVVMCalc.Droid.Views.CalctView)));
+                    StartActivity(new Intent(this, typeof(MVVMCalc.Droid.Views.CalcView)));
                     return true;
                 default:
                     return base.OnOptionsItemSelected(item);
@@ -65,7 +66,7 @@ namespace MVVMCalc.Droid
         private void List_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             HistoryData.SelectedResult(e.Position);
-            StartActivity(new Intent(this, typeof(MVVMCalc.Droid.Views.CalctView)));
+            StartActivity(new Intent(this, typeof(CalcView)));
         }
 
         protected override void OnStop()

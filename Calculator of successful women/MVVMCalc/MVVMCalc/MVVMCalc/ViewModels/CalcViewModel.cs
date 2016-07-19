@@ -6,78 +6,78 @@ namespace MVVMCalc.ViewModels
         : MvxViewModel
     {
         #region Binding properties
-        private string _name;
+        private string _name = string.Empty;
         public string Name
         { 
             get { return _name; }
             set { SetProperty (ref _name, value); }
         }
 
-        private string _age;
+        private string _age = string.Empty;
         public string Age
         {
             get { return _age; }
             set { SetProperty(ref _age, value); }
         }
 
-        private string _kids;
+        private string _kids = string.Empty;
         public string Kids
         {
             get { return _kids; }
             set { SetProperty(ref _kids, value); }
         }
 
-        private bool _boys;
+        private bool _boys = false;
         public bool Boys
         {
             get { return _boys; }
             set { SetProperty(ref _boys, value); }
         }
 
-        private bool _girls;
+        private bool _girls = false;
         public bool Girls
         {
             get { return _girls; }
             set { SetProperty(ref _girls, value); }
         }
 
-        private bool _cats;
+        private bool _cats = false;
         public bool Cats
         {
             get { return _cats; }
             set { SetProperty(ref _cats, value); }
         }
 
-        private bool _dogs;
+        private bool _dogs = false;
         public bool Dogs
         {
             get { return _dogs; }
             set { SetProperty(ref _dogs, value); }
         }
 
-        private bool _career;
+        private bool _career = false;
         public bool Career
         {
             get { return _career; }
             set { SetProperty(ref _career, value); }
         }
 
-        private bool _family;
+        private bool _family = false;
         public bool Family
         {
             get { return _family; }
             set { SetProperty(ref _family, value); }
         }
 
-        private bool _yourself;
+        private bool _yourself = false;
         public bool Yourself
         {
             get { return _yourself; }
             set { SetProperty(ref _yourself, value); }
         }
 
-        private bool _answer;
-        public bool Answer
+        private string _answer = string.Empty;
+        public string Answer
         {
             get { return _answer; }
             set { SetProperty(ref _answer, value); }
