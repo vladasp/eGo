@@ -6,6 +6,7 @@ using Android.Views;
 using Android.Widget;
 using MvvmCross.Droid.Views;
 using Android.Graphics;
+using MVVMCalc.ViewModels;
 
 namespace MVVMCalc.Droid.Views
 {
@@ -58,7 +59,7 @@ namespace MVVMCalc.Droid.Views
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            ViewModels.CalcViewModel cvm = new ViewModels.CalcViewModel();
+            var cvm = this.ViewModel as CalcViewModel;
             switch (item.ItemId)
             {
                 case Resource.Id.menuItem:
