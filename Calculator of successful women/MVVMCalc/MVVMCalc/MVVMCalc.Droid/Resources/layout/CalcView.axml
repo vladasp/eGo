@@ -30,7 +30,7 @@
                 android:textColor="@android:color/background_dark"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                local:MvxBind="Text Name"/>
+                local:MvxBind="Text Name" />
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal">
@@ -45,8 +45,8 @@
                 android:id="@+id/editTextAge"
                 android:textColor="@android:color/background_dark"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" 
-                local:MvxBind="Text Age"/>
+                android:layout_height="match_parent"
+                local:MvxBind="Text Age" />
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal">
@@ -61,15 +61,15 @@
                 android:text="@string/Cat"
                 android:id="@+id/checkBoxCat"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent" 
-                local:MvxBind="Checked Cats"/>
+                android:layout_height="match_parent"
+                local:MvxBind="Checked Cats" />
             <CheckBox
                 style="@style/TextSize"
                 android:text="@string/Dog"
                 android:id="@+id/checkBoxDog"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent" 
-                local:MvxBind="Checked Dogs"/>
+                android:layout_height="match_parent"
+                local:MvxBind="Checked Dogs" />
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal">
@@ -84,15 +84,15 @@
                 android:text="@string/Girl"
                 android:id="@+id/checkBoxGirl"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent" 
-                local:MvxBind="Checked Girls"/>
+                android:layout_height="match_parent"
+                local:MvxBind="Checked Girls" />
             <CheckBox
                 style="@style/TextSize"
                 android:text="@string/Boy"
                 android:id="@+id/checkBoxBoy"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent" 
-                local:MvxBind="Checked Boys"/>
+                android:layout_height="match_parent"
+                local:MvxBind="Checked Boys" />
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal">
@@ -107,8 +107,8 @@
                 android:id="@+id/editTextKids"
                 android:textColor="@android:color/background_dark"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" 
-                local:MvxBind="Text Kids"/>
+                android:layout_height="match_parent"
+                local:MvxBind="Text Kids" />
         </LinearLayout>
         <RadioGroup
             android:layout_width="match_parent"
@@ -128,26 +128,22 @@
                 android:layout_height="wrap_content"
                 android:checked="true"
                 android:text="@string/Career"
-                android:id="@+id/radioButtonCareer" 
-                local:MvxBind="Checked Career"/>
+                android:id="@+id/radioButtonCareer"
+                local:MvxBind="Checked Career" />
             <RadioButton
                 style="@style/TextSize"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Family"
-                android:id="@+id/radioButtonFamily" 
-                local:MvxBind="Checked Family"/>
+                android:id="@+id/radioButtonFamily"
+                local:MvxBind="Checked Family" />
             <RadioButton
                 style="@style/TextSize"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Yourself"
-                android:id="@+id/radioButtonYourself" 
-                local:MvxBind="Checked Yourself"/>
+                android:id="@+id/radioButtonYourself"
+                local:MvxBind="Checked Yourself" />
         </RadioGroup>
     </TableLayout>
 </ScrollView>
-
-
-
-<!--local:MvxBind="Text Hello"-->

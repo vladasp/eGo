@@ -61,7 +61,7 @@ namespace MVVMCalc.Droid
                 view.Tag = viewHolder;
             }
             var holder = (ViewHolder)view.Tag;
-            holder.Ansver.Text = item.Ansver;
+            holder.Ansver.Text = item.Answer;
             holder.Name.Text = (string.IsNullOrEmpty(item.Name)) ? string.Empty : item.Name;
             holder.Age.Text = (string.IsNullOrEmpty(item.Age)) ? string.Empty : item.Age;
             return view;

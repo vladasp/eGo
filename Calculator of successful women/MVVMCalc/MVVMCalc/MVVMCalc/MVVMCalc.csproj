@@ -37,6 +37,7 @@
     <Compile Include="ResultModel.cs" />
     <Compile Include="Results.cs" />
     <Compile Include="ViewModels\CalcViewModel.cs" />
+    <Compile Include="ViewModels\ListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Mono.Android">

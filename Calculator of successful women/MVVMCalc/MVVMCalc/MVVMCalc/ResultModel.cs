@@ -19,6 +19,6 @@ namespace MVVMCalc
         public bool Career;
         public bool Family;
         public bool Yourself;
-        public string Ansver;
+        public string Answer;
     }
 }

@@ -1,5 +1,9 @@
+using Android.App;
+using Android.Content;
+using Android.Views;
 using Android.Widget;
 using MvvmCross.Core.ViewModels;
+using static Android.App.Instrumentation;
 
 namespace MVVMCalc.ViewModels
 {
@@ -92,7 +96,8 @@ namespace MVVMCalc.ViewModels
             {
                 return new MvxCommand(() =>
                 {
-                    GetResult(GetInputValue());           
+                    GetResult(GetInputValue());
+                    this.ShowViewModel<ListViewModel>();
                 });
             }
         }
@@ -103,6 +108,7 @@ namespace MVVMCalc.ViewModels
                 return new MvxCommand(() =>
                 {
                     Clear();
+                    this.ShowViewModel<CalcViewModel>();
                 });
             }
         }
@@ -131,9 +137,6 @@ namespace MVVMCalc.ViewModels
         }
         void Clear()
         {
-            //kidsText.SetBackgroundColor(Color.LightGray);
-            //ageText.SetBackgroundColor(Color.LightGray);
-            //nameText.SetBackgroundColor(Color.LightGray);
             HistoryData.IsClear = true;
 
             Kids = string.Empty;
@@ -213,8 +216,33 @@ namespace MVVMCalc.ViewModels
                     break;
             }
 
-            HistoryData.Results[HistoryData.CurrentResult.Position].Ansver = result;
-            HistoryData.CurrentResult.Position = -1;
+            var currentResult = new ResultModel
+            {
+                Name = (string.IsNullOrEmpty(Name)) ? string.Empty : Name,
+                Age = (string.IsNullOrEmpty(Age)) ? string.Empty : Age,
+                Kids = (string.IsNullOrEmpty(Kids)) ? string.Empty : Kids,
+                Cats = Cats,
+                Dogs = Dogs,
+                Boys = Boys,
+                Girls = Girls,
+                Career = Career,
+                Family = Family,
+                Yourself = Yourself,
+                Answer = result
+            };
+
+            if (HistoryData.CurrentResult != null && HistoryData.CurrentResult.Position >= 0)
+            {
+                HistoryData.Results[HistoryData.CurrentResult.Position] = currentResult;
+            }
+            else
+            {
+                HistoryData.Results.Add(currentResult);
+                HistoryData.CurrentResult = HistoryData.Results[HistoryData.Results.Count - 1];
+                HistoryData.CurrentResult.Position = HistoryData.Results.Count - 1;
+            }
+            //HistoryData.Results[HistoryData.CurrentResult.Position].Ansver = result;
+            //HistoryData.CurrentResult.Position = -1;
         }
 
         #region Data validating
@@ -261,5 +289,6 @@ namespace MVVMCalc.ViewModels
             SetValues();
         }
 
+        }
+
     }
-}

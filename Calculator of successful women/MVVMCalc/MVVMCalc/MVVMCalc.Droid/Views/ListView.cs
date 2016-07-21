@@ -9,16 +9,15 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Java.Lang;
-using MVVMCalc.Droid.Views;
+using MvvmCross.Droid.Views;
+using MVVMCalc.ViewModels;
 
-namespace MVVMCalc.Droid
+namespace MVVMCalc.Droid.Views
 {
-    [Activity(Label = "Results")]
-    public class ActivityResult : Activity
+    [Activity(Label = "Main layout")]
+    class ListView : MvxActivity
     {
-
-        ListView list;
+        Android.Widget.ListView list;
         ViewHolderAdapter adapter;
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -26,7 +25,7 @@ namespace MVVMCalc.Droid
 
             SetContentView(Resource.Layout.result_layout);
 
-            list = FindViewById<ListView>(Resource.Id.listResult);
+            list = FindViewById<Android.Widget.ListView>(Resource.Id.listResult);
 
             adapter = new ViewHolderAdapter(HistoryData.Results);
         }
@@ -39,11 +38,11 @@ namespace MVVMCalc.Droid
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
+            var lvm = this.ViewModel as ListViewModel;
             switch (item.ItemId)
             {
                 case Resource.Id.itemCalc:
-                    HistoryData.CurrentResult = null;
-                    StartActivity(new Intent(this, typeof(MVVMCalc.Droid.Views.CalcView)));
+                    lvm.ClickNewItem.Execute(null);
                     return true;
                 default:
                     return base.OnOptionsItemSelected(item);
@@ -74,5 +73,6 @@ namespace MVVMCalc.Droid
             list.ItemClick -= List_ItemClick;
             base.OnStop();
         }
+
     }
 }

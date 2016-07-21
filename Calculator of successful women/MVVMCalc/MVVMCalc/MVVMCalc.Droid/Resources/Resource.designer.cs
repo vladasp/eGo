@@ -246,9 +246,6 @@ namespace MVVMCalc.Droid
 			// aapt resource value: 0x7f040003
 			public const int SplashScreen = 2130968579;
 			
-			// aapt resource value: 0x7f040004
-			public const int TestLayout = 2130968580;
-			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
