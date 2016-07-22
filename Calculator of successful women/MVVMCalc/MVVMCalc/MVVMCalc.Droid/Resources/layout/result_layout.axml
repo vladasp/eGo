@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:local="http://schemas.android.com/apk/res/MVVMCalc.Droid"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ListView
-        android:id="@+id/listResult"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="154.0dp"
-        android:text="No results in list"
-        android:id="@+id/emptyText" />
+    <Mvx.MvxListView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    local:MvxBind="ItemsSource Results"
+    local:MvxItemTemplate="@layout/cell_layout"/>
 </LinearLayout>

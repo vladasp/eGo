@@ -134,10 +134,26 @@ namespace MVVMCalc.ViewModels
                 Yourself = HistoryData.CurrentResult.Yourself;
             }
             HistoryData.IsClear = false;
+
+            //if (!DataBaseHelper.Instance.IsClear && DataBaseHelper.Instance.Current != null)
+            //{
+            //    Name = DataBaseHelper.Instance.Current.Name;
+            //    Age = DataBaseHelper.Instance.Current.Age;
+            //    Kids = DataBaseHelper.Instance.Current.Kids;
+            //    Cats = DataBaseHelper.Instance.Current.Cats;
+            //    Dogs = DataBaseHelper.Instance.Current.Dogs;
+            //    Boys = DataBaseHelper.Instance.Current.Boys;
+            //    Girls = DataBaseHelper.Instance.Current.Girls;
+            //    Career = DataBaseHelper.Instance.Current.Career;
+            //    Family = DataBaseHelper.Instance.Current.Family;
+            //    Yourself = DataBaseHelper.Instance.Current.Yourself;
+            //}
+            //DataBaseHelper.Instance.IsClear = false;
         }
         void Clear()
         {
             HistoryData.IsClear = true;
+            //DataBaseHelper.Instance.IsClear = true;
 
             Kids = string.Empty;
             Age = string.Empty;
@@ -231,6 +247,16 @@ namespace MVVMCalc.ViewModels
                 Answer = result
             };
 
+            //if(DataBaseHelper.Instance.Current != null && DataBaseHelper.Instance.Current.Position >= 0)
+            //{
+            //    DataBaseHelper.Instance.Update(DataBaseHelper.Instance.Current.Position, currentResult);
+            //}
+            //else
+            //{
+            //    DataBaseHelper.Instance.AddResult(currentResult);
+            //    DataBaseHelper.Instance.Selected(DataBaseHelper.Instance.Current.Position - 1);
+            //    DataBaseHelper.Instance.Current.Position = DataBaseHelper.Instance.GetResults().Count - 1;
+            //}
             if (HistoryData.CurrentResult != null && HistoryData.CurrentResult.Position >= 0)
             {
                 HistoryData.Results[HistoryData.CurrentResult.Position] = currentResult;
@@ -241,8 +267,6 @@ namespace MVVMCalc.ViewModels
                 HistoryData.CurrentResult = HistoryData.Results[HistoryData.Results.Count - 1];
                 HistoryData.CurrentResult.Position = HistoryData.Results.Count - 1;
             }
-            //HistoryData.Results[HistoryData.CurrentResult.Position].Ansver = result;
-            //HistoryData.CurrentResult.Position = -1;
         }
 
         #region Data validating

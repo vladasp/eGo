@@ -182,23 +182,17 @@ namespace MVVMCalc.Droid
 			// aapt resource value: 0x7f050004
 			public const int editTextName = 2131034116;
 			
-			// aapt resource value: 0x7f050012
-			public const int emptyText = 2131034130;
-			
-			// aapt resource value: 0x7f050015
-			public const int itemCalc = 2131034133;
-			
-			// aapt resource value: 0x7f050011
-			public const int listResult = 2131034129;
+			// aapt resource value: 0x7f050013
+			public const int itemCalc = 2131034131;
 			
 			// aapt resource value: 0x7f050003
 			public const int ll = 2131034115;
 			
-			// aapt resource value: 0x7f050014
-			public const int menuClear = 2131034132;
+			// aapt resource value: 0x7f050012
+			public const int menuClear = 2131034130;
 			
-			// aapt resource value: 0x7f050013
-			public const int menuItem = 2131034131;
+			// aapt resource value: 0x7f050011
+			public const int menuItem = 2131034129;
 			
 			// aapt resource value: 0x7f05000b
 			public const int radioButtonCareer = 2131034123;

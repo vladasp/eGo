@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using MvvmCross.Droid.Views;
 using MVVMCalc.ViewModels;
+using MvvmCross.Platform;
 
 namespace MVVMCalc.Droid.Views
 {
@@ -25,9 +26,10 @@ namespace MVVMCalc.Droid.Views
 
             SetContentView(Resource.Layout.result_layout);
 
-            list = FindViewById<Android.Widget.ListView>(Resource.Id.listResult);
+            //list = FindViewById<Android.Widget.ListView>(Resource.Id.listResult);
 
-            adapter = new ViewHolderAdapter(HistoryData.Results);
+            //adapter = new ViewHolderAdapter(HistoryData.Results);
+            //adapter = new ViewHolderAdapter(DataBaseHelper.Instance.GetResults());
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -54,16 +56,19 @@ namespace MVVMCalc.Droid.Views
             base.OnStart();
 
             HistoryData.CurrentResult = null;
+            //DataBaseHelper.Instance.Current = null;
 
-            list.Adapter = adapter;
+            //list.Adapter = adapter;
 
-            list.EmptyView = FindViewById<TextView>(Resource.Id.emptyText);
+            //list.EmptyView = FindViewById<TextView>(Resource.Id.emptyText);
 
-            list.ItemClick += List_ItemClick;
+            //list.ItemClick += List_ItemClick;
         }
 
         private void List_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
+           
+            //DataBaseHelper.Instance.Selected(e.Position);
             HistoryData.SelectedResult(e.Position);
             StartActivity(new Intent(this, typeof(CalcView)));
         }
