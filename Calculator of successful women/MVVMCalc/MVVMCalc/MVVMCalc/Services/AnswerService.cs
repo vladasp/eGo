@@ -8,6 +8,10 @@ namespace MVVMCalc.Services
 {
     public class AnswerService : IAnswerService
     {
+        public AnswerService()
+        {
+            ReadData();
+        }
         protected List<ResultModel> _results;
         public ResultModel this[int position]
         {
@@ -27,6 +31,10 @@ namespace MVVMCalc.Services
             {
                 _results = value;
             }
+        }
+        public void ReadData()
+        {
+            Results = HistoryData.Results;
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MVVMCalc
 {
-    public static class Results
+    public static class ResultsString
     {
         public static string Ansver1 = "You are too small for this calculator";
         public static string Ansver2 = "You are the one who reaches goals";

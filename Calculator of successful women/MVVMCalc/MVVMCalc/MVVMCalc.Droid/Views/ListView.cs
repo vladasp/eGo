@@ -19,17 +19,12 @@ namespace MVVMCalc.Droid.Views
     class ListView : MvxActivity
     {
         Android.Widget.ListView list;
-        ViewHolderAdapter adapter;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.result_layout);
 
-            //list = FindViewById<Android.Widget.ListView>(Resource.Id.listResult);
-
-            //adapter = new ViewHolderAdapter(HistoryData.Results);
-            //adapter = new ViewHolderAdapter(DataBaseHelper.Instance.GetResults());
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -57,27 +52,8 @@ namespace MVVMCalc.Droid.Views
 
             HistoryData.CurrentResult = null;
             //DataBaseHelper.Instance.Current = null;
-
-            //list.Adapter = adapter;
-
-            //list.EmptyView = FindViewById<TextView>(Resource.Id.emptyText);
-
-            //list.ItemClick += List_ItemClick;
         }
 
-        private void List_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
-        {
-           
-            //DataBaseHelper.Instance.Selected(e.Position);
-            HistoryData.SelectedResult(e.Position);
-            StartActivity(new Intent(this, typeof(CalcView)));
-        }
-
-        protected override void OnStop()
-        {
-            list.ItemClick -= List_ItemClick;
-            base.OnStop();
-        }
 
     }
 }

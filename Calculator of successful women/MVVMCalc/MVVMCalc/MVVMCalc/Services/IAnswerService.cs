@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace MVVMCalc.Services
 {
-    interface IAnswerService
+    public interface IAnswerService
     {
         List<ResultModel> Results { get; set; }
         ResultModel this[int position] { get; }
+        void ReadData();
     }
 }
  

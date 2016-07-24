@@ -5,14 +5,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace MVVMCalc.ViewModels
 {
     public class ListViewModel: MvxViewModel
     {
 
-        public ListViewModel(AnswerService service)
+        private readonly IAnswerService _servise;
+        public ListViewModel(IAnswerService service)
         {
+            _servise = service;
             Results = service.Results;
         }
 
@@ -20,7 +23,28 @@ namespace MVVMCalc.ViewModels
         public List<ResultModel> Results
         {
             get { return _results; }
-            set { _results = value; RaisePropertyChanged(() => Results); }
+            set {
+                _results = value;
+                RaisePropertyChanged(() => Results);
+            }
+            //set { this.RaiseAndSetIfChanged(ref this._results, value); }
+        }
+
+        //private MvxCommand<ResultModel> _itemSelectedCommand;
+
+        //public System.Windows.Input.ICommand ItemSelectedCommand
+        //{
+        //    get
+        //    {
+        //        _itemSelectedCommand = _itemSelectedCommand ?? new MvxCommand<ResultModel>(DoSelectItem);
+        //        return _itemSelectedCommand;
+        //    }
+        //}
+
+        private void DoSelectItem(ResultModel item)
+        {
+            HistoryData.CurrentResult = item;
+            ShowViewModel<CalcViewModel>();
         }
 
         public IMvxCommand ClickNewItem
@@ -40,11 +64,7 @@ namespace MVVMCalc.ViewModels
         {
             get
             {
-                return new MvxCommand(() =>
-                {
-                    //HistoryData.SelectedResult(e.Position);
-                    this.ShowViewModel<CalcViewModel>();
-                });
+                return new MvxCommand<ResultModel>(DoSelectItem);
             }
         }
 

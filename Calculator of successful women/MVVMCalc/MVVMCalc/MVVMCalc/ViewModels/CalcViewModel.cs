@@ -213,22 +213,22 @@ namespace MVVMCalc.ViewModels
             switch (index)
             {
                 case 1:
-                    result = Results.Ansver1;
+                    result = ResultsString.Ansver1;
                     break;
                 case 2:
-                    result = Results.Ansver2;
+                    result = ResultsString.Ansver2;
                     break;
                 case 31:
-                    result = Results.Ansver31;
+                    result = ResultsString.Ansver31;
                     break;
                 case 32:
-                    result = Results.Ansver32;
+                    result = ResultsString.Ansver32;
                     break;
                 case 4:
-                    result = Results.Ansver4;
+                    result = ResultsString.Ansver4;
                     break;
                 default:
-                    result = Results.Ansver5;
+                    result = ResultsString.Ansver5;
                     break;
             }
 
@@ -259,7 +259,17 @@ namespace MVVMCalc.ViewModels
             //}
             if (HistoryData.CurrentResult != null && HistoryData.CurrentResult.Position >= 0)
             {
-                HistoryData.Results[HistoryData.CurrentResult.Position] = currentResult;
+                HistoryData.Results[HistoryData.CurrentResult.Position].Name = currentResult.Name;
+                HistoryData.Results[HistoryData.CurrentResult.Position].Age = currentResult.Age;
+                HistoryData.Results[HistoryData.CurrentResult.Position].Kids = currentResult.Kids;
+                HistoryData.Results[HistoryData.CurrentResult.Position].Cats = currentResult.Cats;
+                HistoryData.Results[HistoryData.CurrentResult.Position].Dogs = currentResult.Dogs;
+                HistoryData.Results[HistoryData.CurrentResult.Position].Boys = currentResult.Boys;
+                HistoryData.Results[HistoryData.CurrentResult.Position].Girls = currentResult.Girls;
+                HistoryData.Results[HistoryData.CurrentResult.Position].Career = currentResult.Career;
+                HistoryData.Results[HistoryData.CurrentResult.Position].Family = currentResult.Family;
+                HistoryData.Results[HistoryData.CurrentResult.Position].Yourself = currentResult.Yourself;
+                HistoryData.Results[HistoryData.CurrentResult.Position].Answer = currentResult.Answer;
             }
             else
             {
@@ -312,7 +322,6 @@ namespace MVVMCalc.ViewModels
         {
             SetValues();
         }
-
-        }
-
     }
+
+}

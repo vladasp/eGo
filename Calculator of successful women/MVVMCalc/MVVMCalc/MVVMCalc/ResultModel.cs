@@ -8,9 +8,9 @@ namespace MVVMCalc
 {
     public class ResultModel
     {
-        public int Position = -1;
-        public string Name;
-        public string Age;
+        public int Position { get; set; }
+        public string Name { get; set;}
+        public string Age { get; set; }
         public string Kids;
         public bool Cats;
         public bool Dogs;
@@ -19,6 +19,6 @@ namespace MVVMCalc
         public bool Career;
         public bool Family;
         public bool Yourself;
-        public string Answer;
+        public string Answer { get; set; }
     }
 }
