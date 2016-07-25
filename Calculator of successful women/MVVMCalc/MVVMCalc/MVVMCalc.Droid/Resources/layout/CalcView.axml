@@ -30,7 +30,8 @@
                 android:textColor="@android:color/background_dark"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                local:MvxBind="Text Name" />
+                local:MvxBind="Text Name"
+                android:background="@android:color/darker_gray" />
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal">
@@ -46,7 +47,8 @@
                 android:textColor="@android:color/background_dark"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                local:MvxBind="Text Age" />
+                local:MvxBind="Text Age"
+                android:background="@android:color/darker_gray" />
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal">
@@ -108,7 +110,8 @@
                 android:textColor="@android:color/background_dark"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                local:MvxBind="Text Kids" />
+                local:MvxBind="Text Kids"
+                android:background="@android:color/darker_gray" />
         </LinearLayout>
         <RadioGroup
             android:layout_width="match_parent"

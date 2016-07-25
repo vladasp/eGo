@@ -47,13 +47,17 @@ namespace MVVMCalc.Droid
 			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView = global::MVVMCalc.Droid.Resource.Styleable.MvxListView;
 			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate = global::MVVMCalc.Droid.Resource.Styleable.MvxListView_MvxDropDownItemTemplate;
 			global::MvvmCross.Binding.Droid.Resource.Styleable.MvxListView_MvxItemTemplate = global::MVVMCalc.Droid.Resource.Styleable.MvxListView_MvxItemTemplate;
+			global::MvvmCross.Plugins.Sqlite.Droid.Resource.String.ApplicationName = global::MVVMCalc.Droid.Resource.String.ApplicationName;
+			global::MvvmCross.Plugins.Sqlite.Droid.Resource.String.Hello = global::MVVMCalc.Droid.Resource.String.Hello;
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::MVVMCalc.Droid.Resource.String.ApplicationName;
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::MVVMCalc.Droid.Resource.String.Hello;
 		}
 		
 		public partial class Array
 		{
 			
-			// aapt resource value: 0x7f070000
-			public const int androidcolors = 2131165184;
+			// aapt resource value: 0x7f080000
+			public const int androidcolors = 2131230720;
 			
 			static Array()
 			{
@@ -102,17 +106,17 @@ namespace MVVMCalc.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f060002
-			public const int dirty_blue = 2131099650;
+			// aapt resource value: 0x7f070002
+			public const int dirty_blue = 2131165186;
 			
-			// aapt resource value: 0x7f060001
-			public const int dirty_green = 2131099649;
+			// aapt resource value: 0x7f070001
+			public const int dirty_green = 2131165185;
 			
-			// aapt resource value: 0x7f060003
-			public const int dirty_red = 2131099651;
+			// aapt resource value: 0x7f070003
+			public const int dirty_red = 2131165187;
 			
-			// aapt resource value: 0x7f060000
-			public const int transparent = 2131099648;
+			// aapt resource value: 0x7f070000
+			public const int transparent = 2131165184;
 			
 			static Color()
 			{
@@ -155,65 +159,65 @@ namespace MVVMCalc.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int MvvmCrossTagId = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int MvvmCrossTagId = 2131099648;
 			
-			// aapt resource value: 0x7f050001
-			public const int MvxBindingTagUnique = 2131034113;
+			// aapt resource value: 0x7f060001
+			public const int MvxBindingTagUnique = 2131099649;
 			
-			// aapt resource value: 0x7f050009
-			public const int checkBoxBoy = 2131034121;
+			// aapt resource value: 0x7f060009
+			public const int checkBoxBoy = 2131099657;
 			
-			// aapt resource value: 0x7f050006
-			public const int checkBoxCat = 2131034118;
+			// aapt resource value: 0x7f060006
+			public const int checkBoxCat = 2131099654;
 			
-			// aapt resource value: 0x7f050007
-			public const int checkBoxDog = 2131034119;
+			// aapt resource value: 0x7f060007
+			public const int checkBoxDog = 2131099655;
 			
-			// aapt resource value: 0x7f050008
-			public const int checkBoxGirl = 2131034120;
+			// aapt resource value: 0x7f060008
+			public const int checkBoxGirl = 2131099656;
 			
-			// aapt resource value: 0x7f050005
-			public const int editTextAge = 2131034117;
+			// aapt resource value: 0x7f060005
+			public const int editTextAge = 2131099653;
 			
-			// aapt resource value: 0x7f05000a
-			public const int editTextKids = 2131034122;
+			// aapt resource value: 0x7f06000a
+			public const int editTextKids = 2131099658;
 			
-			// aapt resource value: 0x7f050004
-			public const int editTextName = 2131034116;
+			// aapt resource value: 0x7f060004
+			public const int editTextName = 2131099652;
 			
-			// aapt resource value: 0x7f050013
-			public const int itemCalc = 2131034131;
+			// aapt resource value: 0x7f060013
+			public const int itemCalc = 2131099667;
 			
-			// aapt resource value: 0x7f050003
-			public const int ll = 2131034115;
+			// aapt resource value: 0x7f060003
+			public const int ll = 2131099651;
 			
-			// aapt resource value: 0x7f050012
-			public const int menuClear = 2131034130;
+			// aapt resource value: 0x7f060012
+			public const int menuClear = 2131099666;
 			
-			// aapt resource value: 0x7f050011
-			public const int menuItem = 2131034129;
+			// aapt resource value: 0x7f060011
+			public const int menuItem = 2131099665;
 			
-			// aapt resource value: 0x7f05000b
-			public const int radioButtonCareer = 2131034123;
+			// aapt resource value: 0x7f06000b
+			public const int radioButtonCareer = 2131099659;
 			
-			// aapt resource value: 0x7f05000c
-			public const int radioButtonFamily = 2131034124;
+			// aapt resource value: 0x7f06000c
+			public const int radioButtonFamily = 2131099660;
 			
-			// aapt resource value: 0x7f05000d
-			public const int radioButtonYourself = 2131034125;
+			// aapt resource value: 0x7f06000d
+			public const int radioButtonYourself = 2131099661;
 			
-			// aapt resource value: 0x7f05000f
-			public const int rowAge = 2131034127;
+			// aapt resource value: 0x7f06000f
+			public const int rowAge = 2131099663;
 			
-			// aapt resource value: 0x7f050010
-			public const int rowAnsver = 2131034128;
+			// aapt resource value: 0x7f060010
+			public const int rowAnsver = 2131099664;
 			
-			// aapt resource value: 0x7f05000e
-			public const int rowName = 2131034126;
+			// aapt resource value: 0x7f06000e
+			public const int rowName = 2131099662;
 			
-			// aapt resource value: 0x7f050002
-			public const int sv = 2131034114;
+			// aapt resource value: 0x7f060002
+			public const int sv = 2131099650;
 			
 			static Id()
 			{
@@ -288,86 +292,86 @@ namespace MVVMCalc.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f090004
-			public const int Age = 2131296260;
+			// aapt resource value: 0x7f050004
+			public const int Age = 2131034116;
 			
-			// aapt resource value: 0x7f090014
-			public const int Ansver1 = 2131296276;
+			// aapt resource value: 0x7f050014
+			public const int Ansver1 = 2131034132;
 			
-			// aapt resource value: 0x7f090015
-			public const int Ansver2 = 2131296277;
+			// aapt resource value: 0x7f050015
+			public const int Ansver2 = 2131034133;
 			
-			// aapt resource value: 0x7f090016
-			public const int Ansver31 = 2131296278;
+			// aapt resource value: 0x7f050016
+			public const int Ansver31 = 2131034134;
 			
-			// aapt resource value: 0x7f090017
-			public const int Ansver32 = 2131296279;
+			// aapt resource value: 0x7f050017
+			public const int Ansver32 = 2131034135;
 			
-			// aapt resource value: 0x7f090018
-			public const int Ansver4 = 2131296280;
+			// aapt resource value: 0x7f050018
+			public const int Ansver4 = 2131034136;
 			
-			// aapt resource value: 0x7f090019
-			public const int Ansver5 = 2131296281;
+			// aapt resource value: 0x7f050019
+			public const int Ansver5 = 2131034137;
 			
-			// aapt resource value: 0x7f090001
-			public const int ApplicationName = 2131296257;
+			// aapt resource value: 0x7f050001
+			public const int ApplicationName = 2131034113;
 			
-			// aapt resource value: 0x7f090011
-			public const int Back = 2131296273;
+			// aapt resource value: 0x7f050011
+			public const int Back = 2131034129;
 			
-			// aapt resource value: 0x7f090009
-			public const int Boy = 2131296265;
+			// aapt resource value: 0x7f050009
+			public const int Boy = 2131034121;
 			
-			// aapt resource value: 0x7f09000c
-			public const int Career = 2131296268;
+			// aapt resource value: 0x7f05000c
+			public const int Career = 2131034124;
 			
-			// aapt resource value: 0x7f090007
-			public const int Cat = 2131296263;
+			// aapt resource value: 0x7f050007
+			public const int Cat = 2131034119;
 			
-			// aapt resource value: 0x7f090012
-			public const int Clean = 2131296274;
+			// aapt resource value: 0x7f050012
+			public const int Clean = 2131034130;
 			
-			// aapt resource value: 0x7f090013
-			public const int Default = 2131296275;
+			// aapt resource value: 0x7f050013
+			public const int Default = 2131034131;
 			
-			// aapt resource value: 0x7f090006
-			public const int Dog = 2131296262;
+			// aapt resource value: 0x7f050006
+			public const int Dog = 2131034118;
 			
-			// aapt resource value: 0x7f09000d
-			public const int Family = 2131296269;
+			// aapt resource value: 0x7f05000d
+			public const int Family = 2131034125;
 			
-			// aapt resource value: 0x7f09000a
-			public const int Girl = 2131296266;
+			// aapt resource value: 0x7f05000a
+			public const int Girl = 2131034122;
 			
-			// aapt resource value: 0x7f090000
-			public const int Hello = 2131296256;
+			// aapt resource value: 0x7f050000
+			public const int Hello = 2131034112;
 			
-			// aapt resource value: 0x7f090002
-			public const int IsMarried = 2131296258;
+			// aapt resource value: 0x7f050002
+			public const int IsMarried = 2131034114;
 			
-			// aapt resource value: 0x7f09000f
-			public const int Kids = 2131296271;
+			// aapt resource value: 0x7f05000f
+			public const int Kids = 2131034127;
 			
-			// aapt resource value: 0x7f090003
-			public const int Name = 2131296259;
+			// aapt resource value: 0x7f050003
+			public const int Name = 2131034115;
 			
-			// aapt resource value: 0x7f090008
-			public const int Partner = 2131296264;
+			// aapt resource value: 0x7f050008
+			public const int Partner = 2131034120;
 			
-			// aapt resource value: 0x7f090005
-			public const int Pet = 2131296261;
+			// aapt resource value: 0x7f050005
+			public const int Pet = 2131034117;
 			
-			// aapt resource value: 0x7f09000b
-			public const int Prioryty = 2131296267;
+			// aapt resource value: 0x7f05000b
+			public const int Prioryty = 2131034123;
 			
-			// aapt resource value: 0x7f090010
-			public const int Result = 2131296272;
+			// aapt resource value: 0x7f050010
+			public const int Result = 2131034128;
 			
-			// aapt resource value: 0x7f09000e
-			public const int Yourself = 2131296270;
+			// aapt resource value: 0x7f05000e
+			public const int Yourself = 2131034126;
 			
-			// aapt resource value: 0x7f09001a
-			public const int menuItem = 2131296282;
+			// aapt resource value: 0x7f05001a
+			public const int menuItem = 2131034138;
 			
 			static String()
 			{
@@ -382,20 +386,20 @@ namespace MVVMCalc.Droid
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f080001
-			public const int EnterFild = 2131230721;
+			// aapt resource value: 0x7f090001
+			public const int EnterFild = 2131296257;
 			
-			// aapt resource value: 0x7f080004
-			public const int LabelSize = 2131230724;
+			// aapt resource value: 0x7f090004
+			public const int LabelSize = 2131296260;
 			
-			// aapt resource value: 0x7f080003
-			public const int LeftTextSize = 2131230723;
+			// aapt resource value: 0x7f090003
+			public const int LeftTextSize = 2131296259;
 			
-			// aapt resource value: 0x7f080002
-			public const int TextSize = 2131230722;
+			// aapt resource value: 0x7f090002
+			public const int TextSize = 2131296258;
 			
-			// aapt resource value: 0x7f080000
-			public const int Theme_Splash = 2131230720;
+			// aapt resource value: 0x7f090000
+			public const int Theme_Splash = 2131296256;
 			
 			static Style()
 			{

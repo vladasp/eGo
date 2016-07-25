@@ -1,22 +1,17 @@
 ﻿using MVVMCalc.Services;
 using MvvmCross.Core.ViewModels;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 
 namespace MVVMCalc.ViewModels
 {
     public class ListViewModel: MvxViewModel
     {
 
-        private readonly IAnswerService _servise;
-        public ListViewModel(IAnswerService service)
+        private readonly IDataBaseService _servise;
+        public ListViewModel(IDataBaseService service)
         {
             _servise = service;
-            Results = service.Results;
+            Results = service.GetResults();
         }
 
         private List<ResultModel> _results;
@@ -27,23 +22,11 @@ namespace MVVMCalc.ViewModels
                 _results = value;
                 RaisePropertyChanged(() => Results);
             }
-            //set { this.RaiseAndSetIfChanged(ref this._results, value); }
         }
-
-        //private MvxCommand<ResultModel> _itemSelectedCommand;
-
-        //public System.Windows.Input.ICommand ItemSelectedCommand
-        //{
-        //    get
-        //    {
-        //        _itemSelectedCommand = _itemSelectedCommand ?? new MvxCommand<ResultModel>(DoSelectItem);
-        //        return _itemSelectedCommand;
-        //    }
-        //}
 
         private void DoSelectItem(ResultModel item)
         {
-            HistoryData.CurrentResult = item;
+            BufferData.CurrentResult = item;
             ShowViewModel<CalcViewModel>();
         }
 
@@ -53,8 +36,7 @@ namespace MVVMCalc.ViewModels
             {
                 return new MvxCommand(() =>
                 {
-                    HistoryData.CurrentResult = null;
-                    //DataBaseHelper.Instance.Current = null;
+                    BufferData.CurrentResult = null;
                     this.ShowViewModel<CalcViewModel>();
                 });
             }

@@ -1,15 +1,19 @@
-using Android.App;
-using Android.Content;
-using Android.Views;
-using Android.Widget;
+using MVVMCalc.Services;
 using MvvmCross.Core.ViewModels;
-using static Android.App.Instrumentation;
 
 namespace MVVMCalc.ViewModels
 {
     public class CalcViewModel 
         : MvxViewModel
     {
+        private readonly IDataBaseService _servise;
+
+        public CalcViewModel(IDataBaseService servise)
+        {
+            _servise = servise;
+            SetValues();
+        }
+
         #region Binding properties
         private string _name = string.Empty;
         public string Name
@@ -112,6 +116,7 @@ namespace MVVMCalc.ViewModels
                 });
             }
         }
+
         #endregion
 
         int age;
@@ -120,20 +125,20 @@ namespace MVVMCalc.ViewModels
 
         void SetValues()
         {
-            if (!HistoryData.IsClear && HistoryData.CurrentResult != null)
+            if (!BufferData.IsClear && BufferData.CurrentResult != null)
             {
-                Name = HistoryData.CurrentResult.Name;
-                Age = HistoryData.CurrentResult.Age;
-                Kids = HistoryData.CurrentResult.Kids;
-                Cats = HistoryData.CurrentResult.Cats;
-                Dogs = HistoryData.CurrentResult.Dogs;
-                Boys = HistoryData.CurrentResult.Boys;
-                Girls = HistoryData.CurrentResult.Girls;
-                Career = HistoryData.CurrentResult.Career;
-                Family = HistoryData.CurrentResult.Family;
-                Yourself = HistoryData.CurrentResult.Yourself;
+                Name = BufferData.CurrentResult.Name;
+                Age = BufferData.CurrentResult.Age;
+                Kids = BufferData.CurrentResult.Kids;
+                Cats = BufferData.CurrentResult.Cats;
+                Dogs = BufferData.CurrentResult.Dogs;
+                Boys = BufferData.CurrentResult.Boys;
+                Girls = BufferData.CurrentResult.Girls;
+                Career = BufferData.CurrentResult.Career;
+                Family = BufferData.CurrentResult.Family;
+                Yourself = BufferData.CurrentResult.Yourself;
             }
-            HistoryData.IsClear = false;
+            BufferData.IsClear = false;
 
             //if (!DataBaseHelper.Instance.IsClear && DataBaseHelper.Instance.Current != null)
             //{
@@ -152,7 +157,7 @@ namespace MVVMCalc.ViewModels
         }
         void Clear()
         {
-            HistoryData.IsClear = true;
+            BufferData.IsClear = true;
             //DataBaseHelper.Instance.IsClear = true;
 
             Kids = string.Empty;
@@ -170,14 +175,10 @@ namespace MVVMCalc.ViewModels
 
             if (!NormaAge() || !CanCalcKids())
             {
-                //ageText.SetBackgroundColor(NormaAge() ? Color.LightGray : Color.LightPink);
-                //kidsText.SetBackgroundColor(CanCalcKids() ? Color.LightGray : Color.LightPink);
-                //nameText.SetBackgroundColor((nameText.Text == string.Empty) ? Color.LightPink : Color.LightGray);
                 input = 5;
             }
             else if (IsAnotherPlanet())
             {
-                //nameText.SetBackgroundColor((nameText.Text == string.Empty) ? Color.LightPink : Color.LightGray);
                 input = 4;
             }
             else if (!IsAdult())
@@ -247,35 +248,14 @@ namespace MVVMCalc.ViewModels
                 Answer = result
             };
 
-            //if(DataBaseHelper.Instance.Current != null && DataBaseHelper.Instance.Current.Position >= 0)
-            //{
-            //    DataBaseHelper.Instance.Update(DataBaseHelper.Instance.Current.Position, currentResult);
-            //}
-            //else
-            //{
-            //    DataBaseHelper.Instance.AddResult(currentResult);
-            //    DataBaseHelper.Instance.Selected(DataBaseHelper.Instance.Current.Position - 1);
-            //    DataBaseHelper.Instance.Current.Position = DataBaseHelper.Instance.GetResults().Count - 1;
-            //}
-            if (HistoryData.CurrentResult != null && HistoryData.CurrentResult.Position >= 0)
+            if (BufferData.CurrentResult != null)
             {
-                HistoryData.Results[HistoryData.CurrentResult.Position].Name = currentResult.Name;
-                HistoryData.Results[HistoryData.CurrentResult.Position].Age = currentResult.Age;
-                HistoryData.Results[HistoryData.CurrentResult.Position].Kids = currentResult.Kids;
-                HistoryData.Results[HistoryData.CurrentResult.Position].Cats = currentResult.Cats;
-                HistoryData.Results[HistoryData.CurrentResult.Position].Dogs = currentResult.Dogs;
-                HistoryData.Results[HistoryData.CurrentResult.Position].Boys = currentResult.Boys;
-                HistoryData.Results[HistoryData.CurrentResult.Position].Girls = currentResult.Girls;
-                HistoryData.Results[HistoryData.CurrentResult.Position].Career = currentResult.Career;
-                HistoryData.Results[HistoryData.CurrentResult.Position].Family = currentResult.Family;
-                HistoryData.Results[HistoryData.CurrentResult.Position].Yourself = currentResult.Yourself;
-                HistoryData.Results[HistoryData.CurrentResult.Position].Answer = currentResult.Answer;
+                this._servise.Update(currentResult);
             }
             else
             {
-                HistoryData.Results.Add(currentResult);
-                HistoryData.CurrentResult = HistoryData.Results[HistoryData.Results.Count - 1];
-                HistoryData.CurrentResult.Position = HistoryData.Results.Count - 1;
+                this._servise.AddResult(currentResult);
+                BufferData.CurrentResult = currentResult;
             }
         }
 
@@ -318,10 +298,6 @@ namespace MVVMCalc.ViewModels
         }
         #endregion
 
-        public CalcViewModel()
-        {
-            SetValues();
-        }
     }
 
 }

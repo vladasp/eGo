@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace MVVMCalc.Services
 {
-    public interface IDataBaseHelper
+    public interface IDataBaseService
     {
         List<ResultModel> GetResults();
         void AddResult(ResultModel result);
-        void Update(int position, ResultModel result);
-        void Selected(int position);
+        void Update(ResultModel result);
+        ResultModel Selected(ResultModel result);
     }
 }
