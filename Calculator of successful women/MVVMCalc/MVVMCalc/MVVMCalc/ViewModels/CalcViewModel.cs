@@ -1,5 +1,6 @@
 using MVVMCalc.Services;
 using MvvmCross.Core.ViewModels;
+using System.Threading.Tasks;
 
 namespace MVVMCalc.ViewModels
 {
@@ -209,7 +210,7 @@ namespace MVVMCalc.ViewModels
             }
             return input;
         }
-        private void GetResult(int index)
+        private async void GetResult(int index)
         {
             switch (index)
             {
@@ -247,16 +248,18 @@ namespace MVVMCalc.ViewModels
                 Yourself = Yourself,
                 Answer = result
             };
-
-            if (BufferData.CurrentResult != null)
+            await Task.Run(() =>
             {
-                this._servise.Update(currentResult);
-            }
-            else
-            {
-                this._servise.AddResult(currentResult);
-                BufferData.CurrentResult = currentResult;
-            }
+                if (BufferData.CurrentResult != null)
+                {
+                    this._servise.Update(currentResult);
+                }
+                else
+                {
+                    this._servise.AddResult(currentResult);
+                    BufferData.CurrentResult = currentResult;
+                }
+            });
         }
 
         #region Data validating

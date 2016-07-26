@@ -1,6 +1,7 @@
 ﻿using MVVMCalc.Services;
 using MvvmCross.Core.ViewModels;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MVVMCalc.ViewModels
 {
@@ -11,7 +12,7 @@ namespace MVVMCalc.ViewModels
         public ListViewModel(IDataBaseService service)
         {
             _servise = service;
-            Results = service.GetResults();
+            Task.Run(() => { Results = service.GetResults(); });
         }
 
         private List<ResultModel> _results;

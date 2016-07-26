@@ -15,6 +15,8 @@ namespace MVVMCalc.Services
     {
         private readonly SQLite.Net.SQLiteConnection _connection;
 
+        object _locker = new object();
+
         public DataBaseService(IMvxSqliteConnectionFactory factory)
         {
             _connection = factory.GetConnection("data.dat");
@@ -49,38 +51,41 @@ namespace MVVMCalc.Services
 
         public void Update(ResultModel result)
         {
-            try
+            lock (_locker)
             {
-                var res = _connection.Table<ResultModel>().Where(item =>
-                item.Name == BufferData.CurrentResult.Name &&
-                item.Age == BufferData.CurrentResult.Age &&
-                item.Kids == BufferData.CurrentResult.Kids &&
-                item.Girls == BufferData.CurrentResult.Girls &&
-                item.Boys == BufferData.CurrentResult.Boys &&
-                item.Dogs == BufferData.CurrentResult.Dogs &&
-                item.Cats == BufferData.CurrentResult.Cats &&
-                item.Career == BufferData.CurrentResult.Career &&
-                item.Family == BufferData.CurrentResult.Family &&
-                item.Yourself == BufferData.CurrentResult.Yourself
-                ).FirstOrDefault();
+                try
+                {
+                    var res = _connection.Table<ResultModel>().Where(item =>
+                    item.Name == BufferData.CurrentResult.Name &&
+                    item.Age == BufferData.CurrentResult.Age &&
+                    item.Kids == BufferData.CurrentResult.Kids &&
+                    item.Girls == BufferData.CurrentResult.Girls &&
+                    item.Boys == BufferData.CurrentResult.Boys &&
+                    item.Dogs == BufferData.CurrentResult.Dogs &&
+                    item.Cats == BufferData.CurrentResult.Cats &&
+                    item.Career == BufferData.CurrentResult.Career &&
+                    item.Family == BufferData.CurrentResult.Family &&
+                    item.Yourself == BufferData.CurrentResult.Yourself
+                    ).FirstOrDefault();
 
-                res.Name = result.Name;
-                res.Age = result.Age;
-                res.Kids = result.Kids;
-                res.Girls = result.Girls;
-                res.Boys = result.Boys;
-                res.Dogs = result.Dogs;
-                res.Cats = result.Cats;
-                res.Career = result.Career;
-                res.Family = result.Family;
-                res.Yourself = result.Yourself;
-                res.Answer = result.Answer;
+                    res.Name = result.Name;
+                    res.Age = result.Age;
+                    res.Kids = result.Kids;
+                    res.Girls = result.Girls;
+                    res.Boys = result.Boys;
+                    res.Dogs = result.Dogs;
+                    res.Cats = result.Cats;
+                    res.Career = result.Career;
+                    res.Family = result.Family;
+                    res.Yourself = result.Yourself;
+                    res.Answer = result.Answer;
 
-                _connection.Update(res);
-            }
-            catch(Exception ex)
-            {
-                string exc = ex.Message;
+                    _connection.Update(res);
+                }
+                catch (Exception ex)
+                {
+                    string exc = ex.Message;
+                }
             }
         }
     }
