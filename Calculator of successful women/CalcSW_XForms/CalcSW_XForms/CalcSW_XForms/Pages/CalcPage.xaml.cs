@@ -15,6 +15,20 @@ namespace CalcSW_XForms.Pages
         {
             InitializeComponent();
             BindingContext = new CalcViewModel();
+            Switch switcher = new Switch();
         }
+        public void OnCalcClick(object sender, EventArgs args)
+        {
+            var vm = BindingContext as CalcViewModel;
+            vm.CalculateCommand.Execute(null);
+            Navigation.PushAsync(new ListPage());
+        }
+
+        public void OnClearClick(object sender, EventArgs args)
+        {
+            var vm = BindingContext as CalcViewModel;
+            vm.ClearCommand.Execute(null);
+        }
+
     }
 }

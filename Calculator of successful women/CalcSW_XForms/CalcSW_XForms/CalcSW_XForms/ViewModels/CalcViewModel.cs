@@ -25,121 +25,125 @@ namespace CalcSW_XForms.ViewModels
         }
 
         #region Binding properties
-        private string _name = string.Empty;
+        private string _name;
         public string Name
         {
             get { return _name; }
             set
             {
-                Name = value;
-                OnPropertyChanged("Name");
+                if(_name != value)
+                {
+
+                    _name = value;
+                    OnPropertyChanged("Name");
+                }
             }
         }
 
-        private string _age = string.Empty;
+        private string _age;
         public string Age
         {
             get { return _age; }
             set {
-                    Age = value;
+                    _age = value;
                     OnPropertyChanged("Age");
                 }
         }
 
-        private string _kids = string.Empty;
+        private string _kids;
         public string Kids
         {
             get { return _kids; }
             set {
-                    Kids = value;
+                    _kids = value;
                     OnPropertyChanged("Kids");
                 }
         }
 
-        private bool _boys = false;
+        private bool _boys;
         public bool Boys
         {
             get { return _boys; }
             set
             {
-                Boys = value;
+                _boys = value;
                 OnPropertyChanged("Boys");
             }
         }
 
-        private bool _girls = false;
+        private bool _girls;
         public bool Girls
         {
             get { return _girls; }
             set
             {
-                Girls = value;
+                _girls = value;
                 OnPropertyChanged("Girls");
             }
         }
 
-        private bool _cats = false;
+        private bool _cats;
         public bool Cats
         {
             get { return _cats; }
             set
             {
-                Cats = value;
+                _cats = value;
                 OnPropertyChanged("Cats");
             }
         }
 
-        private bool _dogs = false;
+        private bool _dogs;
         public bool Dogs
         {
             get { return _dogs; }
             set
             {
-                Dogs = value;
+                _dogs = value;
                 OnPropertyChanged("Dogs");
             }
         }
 
-        private bool _career = false;
+        private bool _career;
         public bool Career
         {
             get { return _career; }
             set
             {
-                Career = value;
+                _career = value;
                 OnPropertyChanged("Career");
             }
         }
 
-        private bool _family = false;
+        private bool _family;
         public bool Family
         {
             get { return _family; }
             set
             {
-                Family = value;
+                _family = value;
                 OnPropertyChanged("Family");
             }
         }
 
-        private bool _yourself = false;
+        private bool _yourself;
         public bool Yourself
         {
             get { return _yourself; }
             set
             {
-                Yourself = value;
+                _yourself = value;
                 OnPropertyChanged("Yourself");
             }
         }
 
-        private string _answer = string.Empty;
+        private string _answer;
         public string Answer
         {
             get { return _answer; }
             set
             {
-                Answer = value;
+                _answer = value;
                 OnPropertyChanged("Answer");
             }
         }

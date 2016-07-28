@@ -3,16 +3,177 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CalcSW_XForms.ViewModels; assembly=CalcSW_XForms"
              x:Class="CalcSW_XForms.Pages.CalcPage">
-  <StackLayout Orientation="Vertical">
-    <Label Text="Name"/>
-    <Entry Text="{Binding Name}"/>
-    <Label Text="Age"/>
-    <Entry Text="{Binding Age}"/>
-    <Label Text="Kids"/>
-    <Label Text="{Binding Kids}"/>
-  </StackLayout>
+  
+  <StackLayout Orientation="Vertical" BackgroundColor="Gray">
+    <Image Source="ic_android_white_24dp.png" />
+    <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+</Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    
+        <Label Text="Name" 
+               TextColor="Red"
+               FontSize="Large"
+               Grid.Row="0" 
+               Grid.Column="0"/>
+        <Entry Text="{Binding Name}" 
+               BackgroundColor="White"
+               TextColor="Black"
+               Grid.Row="0" 
+               Grid.Column="1"/>
+    
+        <Label Text="Age"
+               TextColor="Red"
+               FontSize="Large"
+               Grid.Row="1" 
+               Grid.Column="0"/>
+        <Entry Text="{Binding Age}"
+               BackgroundColor="White"
+               TextColor="Black"
+               Grid.Row="1" 
+               Grid.Column="1"/>
+    
+        <Label Text="Pet"
+               TextColor="Red"
+               FontSize="Large"
+               HorizontalOptions="Start"
+               VerticalOptions="Center"
+               Grid.Row="2"
+               Grid.Column="0" />
+    
+        <Grid Grid.Row="2" Grid.Column="1">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+          </Grid.ColumnDefinitions>
+            <Label Text="Cats"
+                   TextColor="Green"
+                   FontSize="Large"
+                   Grid.Row="0" 
+                   Grid.Column="0"/>
+            <Switch IsToggled ="{Binding Cats}" 
+                    Grid.Row="0" 
+                    Grid.Column="1" 
+                    BackgroundColor="Navy"/>
+            <Label Text="Dogs"
+                   TextColor="Green"
+                   FontSize="Large"
+                   Grid.Row="1" 
+                   Grid.Column="0"/>
+            <Switch IsToggled ="{Binding Dogs}" 
+                    Grid.Row="1" 
+                    Grid.Column="1" 
+                    BackgroundColor="Navy"/>
+        </Grid>
+    
+        <Label Text="Life partner"
+               TextColor="Red"
+               FontSize="Large"
+               HorizontalOptions="Start"
+               VerticalOptions="Center"
+               Grid.Row="3"
+               Grid.Column="0" />
+    
+        <Grid Grid.Row="3" Grid.Column="1">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+          </Grid.ColumnDefinitions>
+            <Label Text="Girls"
+                   TextColor="Green"
+                   FontSize="Large"
+                   Grid.Row="0" 
+                   Grid.Column="0"/>
+            <Switch IsToggled ="{Binding Girls}" 
+                    Grid.Row="0" 
+                    Grid.Column="1" 
+                    BackgroundColor="Navy"/>
+            <Label Text="Boys"
+                   TextColor="Green"
+                   FontSize="Large"
+                   Grid.Row="1" 
+                   Grid.Column="0"/>
+            <Switch IsToggled ="{Binding Boys}" 
+                    Grid.Row="1" 
+                    Grid.Column="1" 
+                    BackgroundColor="Navy"/>
+        </Grid>
+
+        <Label Text="Count of kids"
+               TextColor="Red"
+               FontSize="Large"
+               Grid.Row="4"
+               Grid.Column="0" />
+        <Entry Text="{Binding Kids}" 
+               BackgroundColor="White"
+               TextColor="Black"
+               Grid.Row="4" 
+               Grid.Column="1"/>
+  </Grid>
+    <Label Text="Life priority"
+               TextColor="Red"
+               FontSize="Large"
+               HorizontalOptions="Center"/>
+    <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />     
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+          </Grid.ColumnDefinitions>
+            <Label Text="Career"
+                   TextColor="Green"
+                   FontSize="Large"
+                   HorizontalOptions="Center"
+                   Grid.Row="0" 
+                   Grid.Column="0"/>
+            <Switch IsToggled ="{Binding Career}"
+                    HorizontalOptions="Center"
+                    Grid.Row="0" 
+                    Grid.Column="1" 
+                    BackgroundColor="Navy"/>
+            <Label Text="Family"
+                   TextColor="Green"
+                   FontSize="Large"
+                   Grid.Row="1" 
+                   Grid.Column="0"/>
+            <Switch IsToggled ="{Binding Family}" 
+                    Grid.Row="1" 
+                    Grid.Column="1" 
+                    BackgroundColor="Navy"/>
+             <Label Text="Yourself"
+                   TextColor="Green"
+                   FontSize="Large"
+                   Grid.Row="2" 
+                   Grid.Column="0"/>
+            <Switch IsToggled ="{Binding Yourself}" 
+                    Grid.Row="2" 
+                    Grid.Column="1" 
+                    BackgroundColor="Navy"/>
+        </Grid>
+</StackLayout>
 
   <ContentPage.ToolbarItems>
-    <ToolbarItem Text="Calculate"  />
+    <ToolbarItem Icon="ic_directions_boat_white_24dp.png" Clicked="OnCalcClick"/>
+    <ToolbarItem Icon="ic_do_not_disturb_on_white_24dp.png" Clicked="OnClearClick"/>
   </ContentPage.ToolbarItems>
 </ContentPage>

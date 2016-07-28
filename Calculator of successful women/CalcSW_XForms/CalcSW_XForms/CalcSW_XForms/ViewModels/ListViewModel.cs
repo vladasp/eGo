@@ -29,6 +29,7 @@ namespace CalcSW_XForms.ViewModels
         }
 
         private ObservableCollection<ResultModel> _results;
+
         public ObservableCollection<ResultModel> Results
         {
             get { return _results; }
